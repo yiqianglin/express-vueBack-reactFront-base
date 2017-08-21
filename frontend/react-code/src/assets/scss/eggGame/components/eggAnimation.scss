@@ -1,0 +1,35 @@
+@import '../../lib/lib-variables.scss';
+
+.light-layer
+{
+    position: absolute;
+    z-index: -$zIndex-1;
+    top: 0;
+
+    width: 100%;
+    height: 100%;
+
+    text-align: center;
+
+    background: no-repeat top center;
+    background-size: 100%;
+
+    .slogan-drak
+    {
+        width: 345px;
+        margin-top: 75px;
+    }
+
+    &.left
+    {
+        z-index: $zIndex-9;
+
+        background-image: url('../../img/eggGame/light_left.png');
+    }
+    &.right
+    {
+        z-index: $zIndex-9;
+
+        background-image: url('../../img/eggGame/light_right.png');
+    }
+}

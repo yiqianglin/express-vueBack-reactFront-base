@@ -1,0 +1,12 @@
+syntax = "proto3";
+package com.xunleijr.game.vo ;
+ 
+message UserInfoWZRYResult{
+    string code = 1;
+    string msg = 2;
+    int32 serverType = 3;
+    string qq = 4;
+    string weixin = 5;
+    string roleName = 6;
+    int32 status = 7;
+}

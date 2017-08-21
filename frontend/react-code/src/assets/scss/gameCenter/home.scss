@@ -1,0 +1,12 @@
+@import '../lib/lib-variables';
+.index-wrap
+{
+    position: relative;
+
+    overflow-x: hidden;
+
+    height: 100%;
+
+    background: url('../../img/gameCenter/home/bg.jpg') no-repeat center -100px;
+    background-size: cover;
+}

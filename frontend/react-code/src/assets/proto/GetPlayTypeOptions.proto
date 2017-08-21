@@ -1,0 +1,14 @@
+syntax = "proto3";
+package com.xunleijr.game.vo.updown;
+
+message GetPlayTypeOptionsResult {
+    string code = 1;
+    string msg = 2;
+    repeated Option options = 3;
+}
+
+message Option {
+    int32 optionId = 1;
+    string name = 2;
+    double odds = 3;
+}

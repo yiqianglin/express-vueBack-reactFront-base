@@ -1,0 +1,14 @@
+syntax = "proto3";
+package com.xunleijr.game.vo.updown;
+
+message UpdownUserGuessResult {
+    string type = 1 ;
+    string code = 2;
+    string msg = 3;
+    string weixinId = 4;
+    string weixinName = 5;
+    string weixinPic = 6;
+    int32 guessType = 7;
+    int32 amount = 8;
+    int32 mode = 9;
+}

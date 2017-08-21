@@ -1,0 +1,87 @@
+@font-face
+{
+    font-family: 'REDOCN';
+    font-weight: normal;
+    font-style: normal;
+
+    src: url('font/REDOCN.eot');
+    src: url('font/REDOCN.eot?#font-spider') format('embedded-opentype'),
+    url('font/REDOCN.woff') format('woff'),
+    url('font/REDOCN.ttf') format('truetype'),
+    url('font/REDOCN.svg') format('svg');
+}
+
+.font
+{
+    font-family: 'REDOCN';
+    font-size: 36px;
+
+    color: #f9f7ac;
+    text-shadow: #8d3000 3px 0 0,#8d3000 0 3px 0,#8d3000 -3px 0 0,#8d3000 0 -3px 0;
+}
+
+@font-face
+{
+    font-family: 'Skranji';
+    font-weight: normal;
+    font-style: normal;
+
+    src: url('font/Skranji.eot');
+    src: url('font/Skranji.eot?#font-spider') format('embedded-opentype'),
+    url('font/Skranji.woff') format('woff'),
+    url('font/Skranji.ttf') format('truetype'),
+    url('font/Skranji.svg') format('svg');
+}
+
+.Skranji
+{
+    font-family: 'Skranji';
+    font-size: 36px;
+
+    color: #f9f7ac;
+    text-shadow: #8d3000 3px 0 0,#8d3000 0 3px 0,#8d3000 -3px 0 0,#8d3000 0 -3px 0;
+}
+
+@font-face
+{
+    font-family: 'NotoSansHans';
+    font-weight: normal;
+    font-style: normal;
+
+    src: url('font/NotoSansHans.eot');
+    src: url('font/NotoSansHans.eot?#font-spider') format('embedded-opentype'),
+    url('font/NotoSansHans.woff') format('woff'),
+    url('font/NotoSansHans.ttf') format('truetype'),
+    url('font/NotoSansHans.svg') format('svg');
+}
+
+.NotoSansHans
+{
+    font-family: 'NotoSansHans';
+    font-size: 36px;
+
+    color: #f9f7ac;
+    text-shadow: #8d3000 3px 0 0,#8d3000 0 3px 0,#8d3000 -3px 0 0,#8d3000 0 -3px 0;
+}
+
+@font-face
+{
+    font-family: 'HeavyCn';
+    font-weight: normal;
+    font-style: normal;
+
+    src: url('./font/HeavyCn.ttf');
+    src: url('./font/HeavyCn.eot?#font-spider') format('embedded-opentype'),
+    url('./font/HeavyCn.woff') format('woff'),
+    url('./font/HeavyCn.ttf') format('truetype'),
+    url('./font/HeavyCn.svg') format('svg');
+}
+
+.HeavyCn
+{
+    font-family: 'HeavyCn';
+    font-size: 36px;
+
+    color: #f9f7ac;
+    text-shadow: #8d3000 3px 0 0,#8d3000 0 3px 0,#8d3000 -3px 0 0,#8d3000 0 -3px 0;
+}

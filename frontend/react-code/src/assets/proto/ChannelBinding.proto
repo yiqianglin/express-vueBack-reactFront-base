@@ -1,0 +1,10 @@
+	syntax = "proto3";
+	package com.xunleijr.game.vo ;
+
+	message ChannelBindingResult{
+		string type = 1 ;
+		string code = 2 ;
+		string msg = 3 ;
+		string channelId = 4;
+	}
+

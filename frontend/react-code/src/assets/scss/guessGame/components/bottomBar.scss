@@ -1,0 +1,99 @@
+@import '../../lib/lib-variables.scss';
+
+// 底部选择区域
+.bottom-bar
+{
+    height: 99px;
+    padding: 0 24px;
+
+    background: url('../../img/game/bottom-bg.png') no-repeat center;
+    background-size: 100%;
+    .my-gold
+    {
+        font-size: 20px;
+
+        float: left;
+
+        width: 254px;
+
+        text-align: center;
+        .gold-des
+        {
+            line-height: 1;
+
+            padding: 10px 0;
+
+            color: #d77e33;
+            text-shadow: #5a1b07 2px 0 0,#5a1b07 0 2px 0,#5a1b07 -2px 0 0,#5a1b07 0 -2px 0;
+        }
+        .gold-num
+        {
+            line-height: 54px;
+
+            text-align: left;
+
+            color: #f9f7ac;
+            text-shadow: #761900 2px 0 0,#761900 0 2px 0,#761900 -2px 0 0,#761900 0 -2px 0;
+            .icon-gold
+            {
+                float: left;
+
+                width: 74px;
+                height: 56px;
+                margin-left: 12px;
+
+                background: url('../../img/game/gold-bg.png') no-repeat center;
+                background-size: 64px;
+                &.active
+                {
+                    transform-origin: center;
+                    animation: scaleOut .5s ease;
+                }
+            }
+        }
+        .get-gold
+        {
+            float: right;
+
+            width: 48px;
+            height: 47px;
+            margin-top: 4px;
+            margin-right: 5px;
+
+            background-image: url('../../img/sprites/game-btn/btn-plus.png');
+            background-size: 48px;
+        }
+    }
+    .gold-choice
+    {
+        display: flex;
+
+        margin-top: 6px;
+
+        justify-content: space-around;
+        .choice-item
+        {
+            font-size: 32px;
+            line-height: 86px;
+
+            width: 130px;
+            height: 86px;
+
+            text-align: center;
+
+            color: #bdbb81;
+            text-shadow: #761900 2px 0 0,#761900 0 2px 0,#761900 -2px 0 0,#761900 0 -2px 0;
+            &.choice
+            {
+                background-image: url('../../img/sprites/game-btn/choice-btn-drak.png');
+                background-size: 130px;
+                &.active
+                {
+                    color: #f9f7ac;
+                    background-image: url('../../img/sprites/game-btn/choice-btn.png');
+                    text-shadow: rgba(216, 48, 0, .5) 1px 0 0,rgba(216, 48, 0, .5) 0 1px 0,rgba(216, 48, 0, .5) -1px 0 0,rgba(216, 48, 0, .5) 0 -1px 0;
+                }
+            }
+        }
+    }
+}

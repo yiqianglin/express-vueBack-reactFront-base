@@ -1,0 +1,19 @@
+syntax = "proto3";
+package com.xunleijr.game.vo.smashegg;
+
+message SmashEggWinnersListResult {
+    string code = 1;
+    string msg = 2;
+    repeated WinnersRecord list = 3;
+}
+
+message WinnersRecord  {
+    int32 userId = 1;
+    string weixinName = 2;
+    string portraitUri = 3;
+    int32 prizeId = 4;
+    int32 prizeType = 5;
+    string prizeName = 6;
+    string datetime = 7;
+    int32 awardScore = 8;
+}

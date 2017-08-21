@@ -1,0 +1,13 @@
+syntax = "proto3";
+package com.xunleijr.game.vo.hitme ;
+            
+message HitResult{
+    string code = 1;
+    string msg = 2;
+    int32 accuExpend = 3;
+    int32 accuGain = 4;
+    int32 curGain = 5;
+    int32 balance = 6;
+    int32 userResult = 7;
+    double odds = 8;
+}

@@ -1,0 +1,16 @@
+syntax = "proto3";
+package com.xunleijr.game.vo ;
+
+message WxRechargeScoreResult{
+    string code = 1 ;
+    string msg = 2 ;
+    string prepayId = 3;
+    string requestNo = 4;
+    string appId = 5;
+    string timeStamp = 6;
+    string nonceStr = 7;
+    string pkg = 8;
+    string signType = 9;
+    string paySign = 10;
+    string mwebUrl = 11;
+}

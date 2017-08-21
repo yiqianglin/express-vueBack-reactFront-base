@@ -1,0 +1,45 @@
+.history-record
+{
+    font-size: 0;
+    font-weight: bold;
+    line-height: 52px;
+
+    width: 540px;
+    height: 52px;
+    margin: 0 auto 133px;
+    padding-right: 30px;
+    padding-left: 30px;
+
+    color: #f2ebda;
+    border-radius: 26px;
+    background-color: #372f4e;
+    .text
+    {
+        font-size: 20px;
+    }
+    .arrow
+    {
+        display: inline-block;
+
+        width: 36px;
+        height: 100%;
+        margin-right: 9px;
+
+        vertical-align: top;
+
+        background: no-repeat center;
+        background-size: 36px;
+        &.left
+        {
+            background-image: url('../../img/eggGame/arrow-left.png');
+        }
+        &.right
+        {
+            background-image: url('../../img/eggGame/arrow-right.png');
+        }
+        &:last-child
+        {
+            margin-right: 0;
+        }
+    }
+}

@@ -1,0 +1,785 @@
+@import '../../lib/lib-variables.scss';
+
+
+.transparent-fixed-bg
+{
+    position: fixed;
+    z-index: $zIndex-9+1;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+}
+//弹框 出入金
+.pop-body-get-gold
+{
+    font-family: '微软雅黑';
+
+    position: fixed;
+    z-index: -($zIndex-1);
+
+    width: 660px;
+
+    opacity: 0;
+    .close-btn
+    {
+        position: absolute;
+        z-index: $zIndex-4 + 2;
+        top: 20px;
+        right: 0;
+
+        width: 67px;
+        height: 67px;
+
+        background: url('../../img/pop/get-gold-close.png') no-repeat center;
+        background-size: 67px;
+        &.short-close-btn
+        {
+            top: 55px;
+        }
+    }
+
+    .hd-get-gold
+    {
+        position: relative;
+        z-index: $zIndex-4 + 1;
+
+        width: 379px;
+        height: 72px;
+        margin-left: 35px;
+
+        background: url('../../img/pop/getgold/get-gold-t1.png') no-repeat center;
+        background-size: 379px;
+    }
+
+    .hd-short-balance
+    {
+        position: relative;
+        z-index: $zIndex-4 + 1;
+
+        width: 498px;
+        height: 100px;
+        margin-left: 35px;
+
+        background: url('../../img/pop/getgold/get-gold-t2.png') no-repeat center;
+        background-size: 498px;
+    }
+
+    .bd-wrp
+    {
+        position: relative;
+
+        width: 98%;
+        margin-top: -35px;
+        padding: 4px;
+
+        border-radius: 16px;
+        background: #6c3c15;
+        .bd-wrp-inner
+        {
+            width: 100%;
+            height: 100%;
+            padding: 50px 25px 36px 25px;
+
+            border: 4px solid #ab682f;
+            border-radius: 16px;
+            background: #fefbe5;
+            box-shadow: 0 0 4px #aaa;
+        }
+
+        .bd-bg
+        {
+            position: relative;
+            z-index: 1;
+            .bd-hd-title
+            {
+                font-size: 24px;
+
+                margin-bottom: 27px;
+                padding: 0 25px 0 10px;
+
+                color: #414141;
+                .gold-detail-anker
+                {
+                    float: right;
+
+                    color: #8a5124;
+                }
+                .need-gold
+                {
+                    margin-left: 22px;
+
+                    color: #ff2e29;
+                }
+            }
+            .bd-recharge-list
+            {
+                position: relative;
+
+                width: 578px;
+                height: 94px;
+                margin: -21px 0 22px 0;
+                .inner
+                {
+                    font-family: 'REDOCN';
+                    font-size: 26px;
+                    line-height: 48px;
+
+                    position: relative;
+                    z-index: 2;
+
+                    width: 100%;
+                    height: 100%;
+                    padding: 29px 0 0 83px;
+
+                    opacity: 1;
+                    color: #fd5708;
+                    background: url('../../img/pop/getgold/xl.png') 0 0 no-repeat;
+                    background-size: 69px;
+                }
+                .shine
+                {
+                    position: absolute;
+                    z-index: 1;
+                    bottom: 10px;
+                    left: 10px;
+
+                    width: 560px;
+                    height: 62px;
+
+                    animation: rechargeShine .5s linear infinite;
+
+                    background: url('../../img/pop/getgold/bg.png') center no-repeat;
+                    background-size: 560px;
+                }
+            }
+            .list-box
+            {
+                font-size: 24px;
+
+                display: flex;
+
+                width: 100%;
+                margin-bottom: 5px;
+                padding: 22px 25px;
+
+                color: #414141;
+                background: #f9ecbb;
+                .list-item
+                {
+                    &.list-item1
+                    {
+                        flex: 1;
+                        &.gold-0
+                        {
+                            background: url('../../img/pop/getgold/get-gold-n1.png') no-repeat center;
+                            background-size: 38px;
+                        }
+                        &.gold-1
+                        {
+                            background: url('../../img/pop/getgold/get-gold-n2.png') no-repeat center;
+                            background-size: 47px;
+                        }
+                        &.gold-2
+                        {
+                            background: url('../../img/pop/getgold/get-gold-n3.png') no-repeat center;
+                            background-size: 60px;
+                        }
+                        &.gold-3
+                        {
+                            background: url('../../img/pop/getgold/get-gold-n4.png') no-repeat center;
+                            background-size: 56px;
+                        }
+                        &.gold-4
+                        {
+                            background: url('../../img/pop/getgold/get-gold-nn.png') no-repeat center;
+                            background-size: 77px;
+                        }
+                    }
+                    &.list-item2
+                    {
+                        line-height: 60px;
+
+                        padding-left: .35rem;
+
+                        flex: 3;
+                        .num
+                        {
+                            font-family: 'Arial';
+                            font-size: 32px;
+
+                            color: #8a5124;
+                        }
+                        .line1
+                        {
+                            margin-top: -4px;
+                        }
+                        .line2
+                        {
+                            font-size: 22px;
+
+                            margin-top: 4px;
+
+                            color: #ff594c;
+                        }
+
+                        &.line-more
+                        {
+                            line-height: 1.2;
+                        }
+                    }
+                    &.list-item3
+                    {
+                        text-align: right;
+
+                        flex: 2;
+                        .get-gold-btn
+                        {
+                            font-size: 24px;
+                            font-weight: bolder;
+                            line-height: 58px;
+
+                            display: inline-block;
+
+                            width: 125px;
+                            height: 61px;
+
+                            text-align: center;
+
+                            color: #f9ebbb;
+                            background: url('../../img/pop/getgold/get-gold-btn.png') no-repeat center;
+                            background-size: 125px;
+                            text-shadow: #8d3000 .03rem 0 0, #8d3000 0 .03rem 0, #8d3000 -.03rem 0 0, #8d3000 0 -.03rem 0;
+                        }
+                    }
+                }
+                &.gift
+                {
+                    color: #fe6340;
+                    border: 2px solid #fe6340;
+                    background-color: #fffcf0;
+                    .list-item.list-item2 .num
+                    {
+                        color: #fe6340;
+                    }
+                    .list-item.list-item3 .get-gold-btn
+                    {
+                        color: #fff;
+                        background-image: url('../../img/pop/getgold/get-gold-btn_gift.png');
+                        text-shadow: none;
+                    }
+                }
+            }
+        }
+
+        .recharge-btn
+        {
+            font-size: 36px;
+            font-weight: bolder;
+            line-height: 87px;
+
+            display: block;
+
+            width: 545px;
+            height: 87px;
+            margin: 0 auto;
+
+            color: #f9ebbb;
+            border-top: 1px solid #b46100;
+            border-right: 3px solid #b46100;
+            border-bottom: 8px solid #b46100;
+            border-left: 3px solid #b46100;
+            border-radius: 8px;
+            background: url('../../img/pop/getgold/btn-long.png') no-repeat center;
+            box-shadow: 0 4px 2px #aaa;
+            text-shadow: #8d3000 .03rem 0 0, #8d3000 0 .03rem 0, #8d3000 -.03rem 0 0, #8d3000 0 -.03rem 0;
+        }
+
+        .return-btn
+        {
+            font-size: 28px;
+            line-height: 1.2;
+
+            margin-top: 35px;
+
+            text-decoration: underline;
+
+            color: #8a5124;
+        }
+
+        .bd-gold-section
+        {
+            font-size: 38px;
+            line-height: 90px;
+
+            position: relative;
+
+            display: inline-block;
+
+            margin-bottom: 73px;
+            padding-left: 130px;
+
+            color: #8a5124;
+
+            .icon-gold
+            {
+                position: absolute;
+                top: 10px;
+                left: 0;
+
+                display: inline-block;
+
+                width: 130px;
+                height: 83px;
+
+                &.icon-gold-0
+                {
+                    background: url('../../img/pop/getgold/get-gold-n1.png') no-repeat center;
+                    background-size: 78px;
+                }
+                &.icon-gold-1
+                {
+                    background: url('../../img/pop/getgold/get-gold-n2.png') no-repeat center;
+                    background-size: 89px;
+                }
+                &.icon-gold-2
+                {
+                    background: url('../../img/pop/getgold/get-gold-n3.png') no-repeat center;
+                    background-size: 109px;
+                }
+                &.icon-gold-3
+                {
+                    background: url('../../img/pop/getgold/get-gold-n4.png') no-repeat center;
+                    background-size: 91px;
+                }
+                &.icon-gold-4
+                {
+                    background: url('../../img/pop/getgold/get-gold-nn.png') no-repeat center;
+                    background-size: 118px;
+                }
+            }
+        }
+
+        &.bd-detail-wrp
+        {
+            //获取欢乐豆详情
+            text-align: center;
+            .bd-wrp-inner
+            {
+                padding: 125px 0 0;
+            }
+            .bd-gold-section
+            {
+                .reward-num
+                {
+                    color: #ff4800;
+                }
+            }
+            .reward-tip-p
+            {
+                font-size: 24px;
+
+                margin: -80px 0 55px 0;
+
+                color: #fc1b00;
+
+                .icon{
+                    display: inline-block;
+                    color: #fff;
+                    padding: 0 4px 0 3px;
+                    background: #ff3a33;
+                    line-height: 1.2;
+                    margin-right: 5px;
+                }
+            }
+            .recharge-tips-box
+            {
+                position: relative;
+
+                display: inline-block;
+                .recharge-tips
+                {
+                    font-size: 24px;
+                    line-height: 82px;
+
+                    position: relative;
+
+                    display: inline-block;
+
+                    padding-right: 30px;
+
+                    color: #666;
+                    .icon-question
+                    {
+                        position: absolute;
+                        top: 29px;
+                        right: 0;
+
+                        width: 22px;
+                        height: 22px;
+
+                        background: url('../../img/pop/get-gold-question.png') no-repeat right center;
+                        background-size: 22px;
+                    }
+                }
+                .pop-recharge-tip
+                {
+                    font-size: 24px;
+                    line-height: 1.6;
+
+                    position: absolute;
+                    right: -85px;
+                    bottom: 75px;
+
+                    display: none;
+
+                    width: 537px;
+                    padding: 25px;
+
+                    text-align: left;
+
+                    opacity: 0;
+                    color: #fff;
+                    border-radius: 10px;
+                    background: rgba(0,0,0,.7);
+                    &:after
+                    {
+                        position: absolute;
+                        right: 84px;
+                        bottom: -10px;
+
+                        width: 0;
+                        height: 0;
+
+                        content: '';
+
+                        border-top: 12px solid rgba(0,0,0,.7);
+                        border-right: 12px solid transparent;
+                        border-left: 12px solid transparent;
+                    }
+
+                    &.show-pop-tip
+                    {
+                        display: block;
+
+                        animation: fadeInRechargeTip .5s ease-in-out;
+
+                        opacity: 1;
+                    }
+                }
+            }
+
+            .protocol-anker-box
+            {
+                font-size: 24px;
+                line-height: 78px;
+
+                color: #666;
+                border-radius: 0 0 16px 16px;
+                background: #f3f0da;
+
+                .protocol-anker-p
+                {
+                    position: relative;
+
+                    display: inline-block;
+
+                    padding-left: 54px;
+
+                    .radio-icon
+                    {
+                        position: absolute;
+                        top: 18px;
+                        left: 0;
+
+                        display: inline-block;
+
+                        width: 40px;
+                        height: 40px;
+
+                        background: url('../../img/pop/get-gold-radio-unselect.png') no-repeat left center;
+                        background-size: 40px;
+                    }
+                    .radio-icon.selected
+                    {
+                        background: url('../../img/pop/get-gold-radio-selected.png') no-repeat left center;
+                        background-size: 40px;
+                    }
+                    .protocol-anker
+                    {
+                        color: #666;
+                    }
+                }
+            }
+        }
+
+        &.bd-result-wrp
+        {
+            //获取欢乐豆结果
+            text-align: center;
+            .bd-wrp-inner
+            {
+                padding: 99px 0 0;
+            }
+            .result-hd
+            {
+                display: inline-block;
+
+                margin-bottom: 64px;
+                padding-left: 143px;
+
+                text-align: left;
+                .p1
+                {
+                    font-size: 32px;
+                    font-weight: bold;
+
+                    margin-bottom: 15px;
+
+                    color: #8a5124;
+                }
+                .p2
+                {
+                    font-size: 24px;
+
+                    color: #666;
+                }
+            }
+
+            .result-ft-wrp
+            {
+                margin-top: 35px;
+                padding: 38px 0;
+
+                background: #f3f0da;
+                .result-ft
+                {
+                    display: inline-block;
+
+                    padding-left: 80px;
+
+                    text-align: left;
+
+                    background: url('../../img/pop/get-gold-heart.png') no-repeat 0 center;
+                    background-size: 65px;
+                    .p1
+                    {
+                        font-size: 26px;
+
+                        margin-bottom: 5px;
+
+                        color: #ab682f;
+                    }
+                    .p2
+                    {
+                        font-size: 24px;
+
+                        color: #666;
+                    }
+                }
+                .p3
+                {
+                    font-size: 24px;
+
+                    padding: 0 65px;
+
+                    text-align: left;
+
+                    color: #a1a1a1;
+                }
+            }
+
+            .succ
+            {
+                .result-hd
+                {
+                    background: url('../../img/pop/get-gold-done-green.png') no-repeat 30px center;
+                    background-size: 74px;
+                }
+            }
+
+            .fail
+            {
+                .result-hd
+                {
+                    padding-left: 110px;
+
+                    background: url('../../img/pop/get-gold-question-red.png') no-repeat 30px center;
+                    background-size: 53px;
+                }
+            }
+        }
+
+        &.bd-recharging-wrp
+        {
+            //获取欢乐豆结果
+            text-align: center;
+            .bd-wrp-inner
+            {
+                padding: 99px 0 50px;
+                .p2
+                {
+                    font-size: 24px;
+
+                    margin: -53px 0 30px;
+
+                    color: #666;
+                }
+            }
+        }
+    }
+
+    &.get-gold
+    {
+        // 出现入金主页
+      transform: translate(-50%, 100%);
+      left: 50%;
+    }
+
+    &.get-gold-detail
+    {
+        // 详情
+        transform: translate(-50%, -50%);
+    }
+
+    &.get-gold-result
+    {
+        // 详情
+        transform: translate(-50%, -50%);
+    }
+
+    &.get-gold-recharging
+    {
+        // 查询中
+        transform: translate(-50%, -50%);
+    }
+}
+
+@keyframes rechargeShine
+{
+    0%
+    {
+        opacity: 1;
+    }
+    50%
+    {
+        opacity: .2;
+    }
+    100%
+    {
+        opacity: 1;
+    }
+}
+
+//toast弹窗样式
+.pop-show.pop-get-gold
+{
+    .pop-mask
+    {
+        z-index: $zIndex-5;
+    }
+    .pop-body-get-gold
+    {
+        &.get-gold
+        {
+            // 出现入金主页
+            z-index: $zIndex-6;
+            bottom: 0;
+            left: 50%;
+
+            transform: translate(-50%, -20px);
+/*            animation: slideIntoBottom .5s ease-in-out;
+          animation-delay: 1s;*/
+
+            opacity: 1;
+        }
+        &.get-gold-detail
+        {
+            //出现入金详情页
+            z-index: $zIndex-6;
+            top: 50%;
+            left: 50%;
+
+            transform: translate(-50%, -50%);
+            animation: slideIntoMiddle .5s ease-in-out;
+
+            opacity: 1;
+        }
+        &.get-gold-result
+        {
+            // 入金结果页
+            z-index: $zIndex-6;
+            top: 50%;
+            left: 50%;
+
+            transform: translate(-50%, -50%);
+            animation: slideIntoMiddle .5s ease-in-out;
+
+            opacity: 1;
+        }
+
+        &.get-gold-recharging
+        {
+            // 入金结果页
+            z-index: $zIndex-6;
+            top: 50%;
+            left: 50%;
+
+            transform: translate(-50%, -50%);
+            animation: slideIntoMiddle .5s ease-in-out;
+
+            opacity: 1;
+        }
+    }
+}
+
+@keyframes slideIntoBottom
+{
+    from
+    {
+        transform: translate(-50%, 30px);
+
+        opacity: .5;
+    }
+    to
+    {
+        transform: translate(-50%, -20px);
+
+        opacity: 1;
+    }
+}
+
+@keyframes slideIntoMiddle
+{
+    from
+    {
+        transform: translate(-50%, -30%);
+
+        opacity: .5;
+    }
+    to
+    {
+        transform: translate(-50%, -50%);
+
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInRechargeTip
+{
+    from
+    {
+        transform: translateY(20px);
+
+        opacity: .5;
+    }
+    to
+    {
+        transform: translateY(0);
+
+        opacity: 1;
+    }
+}
+
+@import './popProtocol.scss';

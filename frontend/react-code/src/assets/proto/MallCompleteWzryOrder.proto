@@ -1,0 +1,7 @@
+syntax = "proto3";
+package com.xunleijr.game.vo ;
+  
+message BasicResult{
+    string code = 1 ;
+    string msg = 2 ;
+}

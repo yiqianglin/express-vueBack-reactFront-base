@@ -1,0 +1,110 @@
+@import '../../lib/lib-variables.scss';
+
+.nav-bar
+{
+    display: flex;
+    flex-direction: row;
+
+    height: 96px;
+    padding: 0 20px;
+
+    background: url('../../../img/gameCenter/home/title-bg.png') no-repeat center top;
+    background-size: 750px;
+
+    .nav-left
+    {
+        display: flex;
+        flex-direction: row;
+
+        width: 272px;
+
+        align-items: center;
+
+        .img-box
+        {
+            width: 76px;
+            min-width: 76px;
+            height: 76px;
+            margin-right: 10px;
+        }
+        .user-name
+        {
+            font-size: 30px;
+
+            overflow: hidden;
+
+            white-space: nowrap;
+            text-overflow: ellipsis;
+
+            color: #fff;
+        }
+    }
+
+    .nav-right
+    {
+        display: flex;
+        flex-direction: row;
+
+        height: 68px;
+
+        flex: auto;
+        align-items: center;
+        justify-content: space-between;
+
+        .gold-num
+        {
+            font-size: 20px;
+            line-height: 32px;
+
+            position: relative;
+
+            width: 204px;
+            height: 32px;
+            padding: 0 38px 0 46px;
+
+            text-align: right;
+
+            color: #fff;
+            background: #1f2935;
+            .icon-gold
+            {
+                position: absolute;
+                top: -6px;
+                left: 0;
+
+                display: inline-block;
+
+                width: 46px;
+                height: 46px;
+
+                background: url('../../../img/game/gold-bg.png') no-repeat center;
+                background-size: 46px;
+            }
+            .icon-plus
+            {
+                position: absolute;
+                top: 0;
+                right: 0;
+
+                display: inline-block;
+
+                width: 32px;
+                height: 32px;
+
+                background-image: url('../../../img/sprites/game-btn/btn-plus.png');
+                background-size: 33px;
+            }
+        }
+
+        .icon-rank
+        {
+            display: inline-block;
+
+            width: 67px;
+            height: 45px;
+
+            background-image: url('../../../img/sprites/game-btn/btn-rank.png');
+            background-size: 67px;
+        }
+    }
+}

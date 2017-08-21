@@ -1,0 +1,71 @@
+@import '../../lib/lib-variables.scss';
+
+// 顶部导航条
+.forcast-nav-bar
+{
+    height: 123px;
+    padding: 13px 30px;
+
+    background: url('../../img/record/forcast-top-bg.png') no-repeat center;
+    background-size: 100%;
+    .link-block
+    {
+        position: relative;
+
+        float: right;
+
+        width: 453px;
+        height: 86px;
+        margin: 0 auto;
+        padding: .07rem .08rem .07rem .08rem;
+
+        text-align: center;
+
+        background: url('../../img/record/nav-bg.png') no-repeat;
+        background-size: 100% 100%;
+    }
+    .return-link
+    {
+        float: left;
+
+        width: 140px;
+        height: 60px;
+        margin-top: 11px;
+
+        background: url('../../img/record/return-bg.png') no-repeat center;
+        background-size: 140px;
+    }
+    .nav-link
+    {
+        position: absolute;
+
+        display: inline-block;
+
+        width: 228px;
+        height: 72px;
+        &.real-link
+        {
+            left: 8px;
+
+            background: url('../../img/record/real.png') no-repeat center;
+            background-size: 100% 100%;
+            &.active
+            {
+                background: url('../../img/record/real-active.png') no-repeat center;
+                background-size: 100% 100%;
+            }
+        }
+        &.simu-link
+        {
+            right: .08rem;
+
+            background: url('../../img/record/simu.png') no-repeat center;
+            background-size: 100% 100%;
+            &.active
+            {
+                background: url('../../img/record/simu-active.png') no-repeat center;
+                background-size: 100% 100%;
+            }
+        }
+    }
+}

@@ -1,0 +1,204 @@
+@import '../../lib/lib-variables.scss';
+
+.egg-area
+{
+    position: relative;
+
+    display: flex;
+
+    width: 100%;
+    padding: 0 50px;
+
+    justify-content: center;
+    flex-wrap: wrap;
+
+    .egg-wrap
+    {
+        position: relative;
+
+        width: 50%;
+        .hammer
+        {
+            position: absolute;
+            z-index: -1;
+            right: 0;
+
+            width: 137px;
+            height: 139px;
+
+            transform-origin: 105%;
+
+            opacity: 0;
+            background: url('../../img/eggGame/hammer.png') no-repeat center;
+            background-size: 137px;
+            &.smash
+            {
+                z-index: $zIndex-9;
+
+                animation: smash .84s linear .5s;
+            }
+        }
+    }
+
+    .egg
+    {
+        width: 300px;
+        height: 300px;
+        margin: auto;
+
+        background: url('../../img/eggGame/eggAnim.png') no-repeat;
+        background-position: 0 0;
+        background-size: 2100% 100%;
+
+        &.animHit
+        {
+            animation: animHit 1s steps(9) 1.34s forwards ;
+        }
+        &.animUnhit
+        {
+            animation: animUnhit 1s steps(10) 1.34s forwards ;
+
+            background-position: 50% 0;
+        }
+    }
+    &.egg3
+    {
+        flex-wrap: wrap-reverse;
+        .egg-wrap:last-child
+        {
+            margin-bottom: 20px;
+        }
+        .egg
+        {
+            width: 248px;
+            height: 248px;
+        }
+    }
+    &.egg4
+    {
+        .egg-wrap:first-child
+        {
+            margin-bottom: 20px;
+        }
+        .egg
+        {
+            width: 248px;
+            height: 248px;
+        }
+    }
+}
+
+@keyframes smash
+{
+    0%
+    {
+        transform: rotateZ(0deg);
+
+        opacity: 0;
+    }
+    14.2%
+    {
+        transform: rotateZ(0deg);
+
+        opacity: 1;
+    }
+    42.6%
+    {
+        transform: rotateZ(0deg);
+
+        opacity: 1;
+    }
+    70.8%
+    {
+        transform: rotateZ(70deg);
+
+        opacity: 1;
+    }
+    85%
+    {
+        transform: rotateZ(0deg);
+
+        opacity: 1;
+    }
+    100%
+    {
+        transform: rotateZ(35deg);
+
+        opacity: 1;
+    }
+}
+@keyframes animHit
+{
+    100%
+    {
+        background-position: 45% 0;
+    }
+}
+
+@keyframes animUnhit
+{
+    100%
+    {
+        background-position: 100% 0;
+    }
+    // 0%,
+    // 7.9%
+    // {
+    //     background-position: -0 0;
+    // }
+    // 8%,
+    // 16.3%
+    // {
+    //     background-position: -250px 0;
+    // }
+    // 16.4%,
+    // 24.7%
+    // {
+    //     background-position: -500px 0;
+    // }
+    // 24.8%,
+    // 33.1%
+    // {
+    //     background-position: -750px 0;
+    // }
+    // 33.2%,
+    // 41.5%
+    // {
+    //     background-position: -1000px 0;
+    // }
+    // 41.6%,
+    // 49.9%
+    // {
+    //     background-position: -1250px 0;
+    // }
+    // 50%,
+    // 58.3%
+    // {
+    //     background-position: -1500px 0;
+    // }
+    // 58.4%,
+    // 66.7%
+    // {
+    //     background-position: -1750px 0;
+    // }
+    // 67.8%,
+    // 75.1%
+    // {
+    //     background-position: -2000px 0;
+    // }
+    // 75.2%,
+    // 83.5%
+    // {
+    //     background-position: -2250px 0;
+    // }
+    // 83.6%,
+    // 91.9%
+    // {
+    //     background-position: -2500px 0;
+    // }
+    // 92%,
+    // 100%
+    // {
+    //     background-position: -2750px 0;
+    // }
+}

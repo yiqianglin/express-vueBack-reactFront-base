@@ -1,0 +1,13 @@
+syntax = "proto3";
+package com.xunleijr.game.vo;
+
+message ServerCurRoundInfoResult {
+    string code = 1;
+    string msg = 2;
+
+    message Result {
+        int64 roundId = 1;
+    }
+
+    Result result = 3;
+}

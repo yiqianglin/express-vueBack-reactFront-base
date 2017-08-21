@@ -1,0 +1,21 @@
+syntax = "proto3";
+package com.xunleijr.game.vo ;
+   
+message MallProductListResult{
+    string code = 1 ;
+    string msg = 2 ;
+        
+    message MallProduct {
+        int32 productId = 1 ;
+        string name = 2;
+        int32 needScore = 3;
+        string brief = 4;
+        string picUrl = 5;
+        int32 needSend = 6;
+        int32 stock = 7;
+        int32 hourLimitStart = 8;
+        int32 hourLimitEnd = 9;
+    }
+        
+    repeated MallProduct result = 3;
+}

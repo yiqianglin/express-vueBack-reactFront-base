@@ -1,0 +1,20 @@
+syntax = "proto3";
+package com.xunleijr.game.vo.smashegg;
+
+message SmashEggHistoryRecordResult {
+    string code = 1;
+    string msg = 2;
+    int32 pageIndex = 3;
+    repeated Record list = 4;
+}
+
+message Record  {
+    int32 roundId = 1;
+    int32 guessScore = 2;
+    int32 rewardScore = 3;
+    string prizeName = 4;
+    string datetime = 5;
+    int32 awards = 6;
+    int32 prizeId = 7;
+    int32 endLevel = 8;
+}

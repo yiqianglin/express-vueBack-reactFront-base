@@ -1,0 +1,18 @@
+syntax = "proto3";
+package com.xunleijr.game.vo ;
+
+message OpenCloseResult{
+    string type = 1 ;
+    string code = 2 ;
+    string msg = 3 ;
+
+    message Result {
+        int32 mode = 1;
+        int32 evenType = 2;
+        int64 ts = 3;
+        int64 nextTs = 4;
+     }
+
+    Result result = 4;
+
+}

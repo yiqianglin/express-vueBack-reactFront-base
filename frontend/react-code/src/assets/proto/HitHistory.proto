@@ -1,0 +1,18 @@
+syntax = "proto3";
+package com.xunleijr.game.vo.hitme ;
+            
+message HitHistoryResult{
+    string code = 1;
+    string msg = 2;
+    int32 getScore = 3;
+    repeated Record records = 4;
+}
+  
+message Record{
+    int64 createTime = 1;
+    int32 guessScore = 2;
+    int32 score = 3;
+    int32 type = 4;
+    int32 rewardMode = 5;
+    int32 roundNum = 6;
+}

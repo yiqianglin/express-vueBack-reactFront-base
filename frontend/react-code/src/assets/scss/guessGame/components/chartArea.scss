@@ -1,0 +1,173 @@
+@import '../../lib/lib-variables.scss';
+
+// 闪电图区域
+.chart-area
+{
+    font-size: 26px;
+
+    height: 490px;
+
+    text-align: center;
+
+    color: #f9f7ac;
+    background: url('../../img/game/chart-bg.png') no-repeat center top;
+    background-size: 100%;
+    text-shadow: #8d3000 3px 0 0,#8d3000 0 3px 0,#8d3000 -3px 0 0,#8d3000 0 -3px 0;
+    .chart-title
+    {
+        font-size: 40px;
+        line-height: 74px;
+
+        text-align: center;
+
+        color: #a86835;
+        background: url('../../img/game/title-bg.png') no-repeat center;
+        background-size: 340px;
+        text-shadow: 1.5px 1.3px 1px rgba(106, 57, 37, .93);
+
+        -webkit-text-stroke: 4px #fdb666;
+        &.simu
+        {
+            background-image: url('../../img/game/title-simu-bg.png');
+        }
+        &:first-letter
+        {
+            font-size: 60px;
+        }
+    }
+    .chart-lightning
+    {
+        height: 260px;
+        margin-bottom: 25px;
+    }.closedPeriod
+    {
+        display: inline-block;
+
+        width: 623px;
+        height: 260px;
+        margin-bottom: 30px;
+        padding-top: 163px;
+
+        background: url('../../img/game/close-period_bg.png') no-repeat center 28px;
+        background-size: 153px;
+        .text-p1
+        {
+            font-size: 38.3px;
+
+            text-align: center;
+            letter-spacing: 5.7px;
+
+            color: #d77e33;
+            text-shadow: #ca4637 2px 0 0,#ca4637 0 2px 0,#ca4637 -2px 0 0,#ca4637 0 -2px 0;
+        }
+        .text-p2
+        {
+            font-size: 28.2px;
+
+            letter-spacing: 1.4px;
+
+            color: #d77e33;
+            text-shadow: none;
+        }
+        &.game-fix
+        {
+            background-image: url('../../img/game/close-period-fix_bg.png');
+            background-size: 170px;
+        }
+    }
+    .gameOver
+    {
+        font-family: 'Mircosoft YaHei';
+        font-size: 32px;
+
+        display: inline-block;
+
+        width: 623px;
+        height: 260px;
+        margin-bottom: 30px;
+
+        color: #fff;
+        p
+        {
+            line-height: 1.5;
+
+            display: inline-block;
+
+            margin-top: 180px;
+            padding: 0 20px;
+
+            border-radius: 40px;
+            background-color: rgba(0,0,0,.6);
+            text-shadow: none;
+        }
+    }
+    .history-record
+    {
+        line-height: 50px;
+        .record-txt,
+        .record-item
+        {
+            vertical-align: middle;
+        }
+        .record-item
+        {
+            display: inline-block;
+
+            width: 50px;
+            height: 50px;
+            margin-left: 6px;
+
+            background-size: 50px;
+            &.icon-up
+            {
+                background-image: url('../../img/sprites/game-btn/record-up.png');
+                &.last
+                {
+                    background-image: url('../../img/sprites/game-btn/record-up-last.png');
+                }
+            }
+            &.icon-down
+            {
+                background-image: url('../../img/sprites/game-btn/record-down.png');
+                &.last
+                {
+                    background-image: url('../../img/sprites/game-btn/record-down-last.png');
+                }
+            }
+        }
+        .history-more
+        {
+            margin-left: 10px;
+            padding: 0 18px;
+
+            color: #f9f7ac;
+            border: 2px solid #f9f7ac;
+            border-radius: 25px;
+            box-shadow: 0 0 0 3px #8d3000,inset 0 0 0 3px #8d3000;
+        }
+    }
+    .forcase-text
+    {
+        margin-bottom: 5px;
+
+        color: #f96252;
+        text-shadow: none;
+        .quote-num
+        {
+            font-family: 'Mircosoft YaHei';
+            font-size: 30px;
+
+            margin-left: 10px;
+            padding: 0 14px;
+
+            vertical-align: bottom;
+
+            color: #fff;
+            border-radius: 17.5px;
+            background-color: #f96252;
+            text-shadow: none;
+        }
+    }
+}
+
+@import './lightingChart.scss';

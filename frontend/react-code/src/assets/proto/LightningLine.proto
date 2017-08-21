@@ -1,0 +1,24 @@
+
+syntax = "proto3";
+package com.xunleijr.game.vo;
+
+message LightningLineResult{
+   string code = 1 ;
+   string msg = 2 ;
+
+   message Result {
+       repeated Point points = 1;
+       double upper = 2;
+       double middle = 3;
+       double lower = 4;
+   }
+
+   Result result = 3;
+}
+
+message Point {
+   double quote = 1;
+   int64 ts = 2;
+   int32 upFlag = 3;
+   int32 downFlag = 4;
+}

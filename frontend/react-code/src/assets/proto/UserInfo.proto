@@ -1,0 +1,14 @@
+
+syntax = "proto3";
+package com.xunleijr.game.vo ;
+
+message UserInfoResult{
+    string code = 1;
+    string msg = 2;
+    int32 score = 3;
+    string weixinName = 4;
+    string portraitUri = 5;
+    bool signinStatus = 6;
+    int32 continuousNum = 7;
+    double totalRechargeAmount = 8;
+}

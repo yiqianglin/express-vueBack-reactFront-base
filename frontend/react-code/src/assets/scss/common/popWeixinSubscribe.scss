@@ -1,0 +1,78 @@
+@import '../lib/lib-variables.scss';
+
+// 未关注弹窗
+.pop-show.pop-subscribe
+{
+    .pop-mask
+    {
+        z-index: $zIndex-8;
+    }
+    .pop-subscribe-content
+    {
+        z-index: $zIndex-9;
+    }
+}
+.pop-subscribe
+{
+    .pop-subscribe-content
+    {
+        font-family: 'REDOCN';
+        font-size: 38px;
+        line-height: 1;
+
+        position: absolute;
+        top: 280px;
+        left: 50%;
+
+        width: 560px;
+        height: 639px;
+
+        transition: .3s transform ease;
+        transform: translate3d(-50%,-1000px,0);
+        text-align: center;
+
+        color: #ec7929;
+        background: url('../../img/pop/subscribe/subscribe-bg.png') no-repeat center;
+        background-size: 560px;
+        .pop-text1
+        {
+            margin-top: 50px;
+        }
+        .pop-text2
+        {
+            font-size: 24px;
+
+            margin-top: 24px;
+            margin-bottom: 48px;
+        }
+        .pop-text3
+        {
+            font-size: 20px;
+
+            margin-bottom: 28px;
+
+            color: #d1b993;
+        }
+        .highlight
+        {
+            color: #fe6340;
+            &.num
+            {
+                font-size: 36px;
+            }
+        }
+        .qrcode
+        {
+            width: 266px;
+            height: 314px;
+            padding-bottom: 48px;
+        }
+    }
+    &.pop-show
+    {
+        .pop-subscribe-content
+        {
+            transform: translate3d(-50%,0,0);
+        }
+    }
+}

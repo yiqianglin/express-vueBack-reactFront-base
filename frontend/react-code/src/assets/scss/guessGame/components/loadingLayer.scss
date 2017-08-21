@@ -1,0 +1,69 @@
+@import '../../lib/lib-variables.scss';
+
+.loading-layer
+{
+    position: relative;
+    z-index: 10;
+    // font-family: "REDOCN";
+
+    width: 100%;
+    height: 100%;
+
+    background-color: #22100e;
+    .loading-bar
+    {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+
+        width: 622px;
+        height: 34px;
+        padding: 7px;
+
+        transform: translate(-50%, -50%);
+
+        background: url('../../img/loading/loading-bar.png') no-repeat center;
+        background-size: 100%;
+        .loading-block
+        {
+            position: absolute;
+
+            height: 52px;
+            margin-top: -15px;
+            padding: 12px 45px 12px 0;
+
+            transition: transfrom .1s linear;
+            transform: translateX(0rem);
+
+            background: url('../../img/loading/loading-block.png') no-repeat right center;
+            background-size: 45px;
+
+            will-change: transfrom;
+        }
+        .progress-bar
+        {
+            width: 0;
+            height: 100%;
+
+            transition: width .1s linear;
+
+            border-radius: 10px;
+            background-image: linear-gradient(to right, #000, #fff), linear-gradient(#a5e24d, #a5e24d);
+            box-shadow: inset 0 -1px 10px 0 #008616;
+
+            background-blend-mode: soft-light, normal;
+        }
+    }
+    .progress-text
+    {
+        font-size: 26.6px;
+
+        margin-top: 10px;
+
+        text-align: center;
+        letter-spacing: .7px;
+
+        color: #fff;
+        text-shadow: 0 1px 0 #22712a;
+    }
+}

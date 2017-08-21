@@ -1,0 +1,34 @@
+@import '../../lib/lib-variables.scss';
+
+.smash-area
+{
+    display: flex;
+    flex-direction: column;
+
+    padding-top: 10px;
+
+    flex: 1;
+    justify-content: flex-start;
+    .slogan
+    {
+        position: relative;
+
+        height: 385px;
+        padding-top: 333px;
+
+        background: url('../../img/eggGame/slogan.png') no-repeat top center;
+        background-size: 378px;
+
+        &.active
+        {
+            position: relative;
+            z-index: $zIndex-8;
+        }
+    }
+}
+
+@import './components/gametip.scss';
+@import './components/eggArea.scss';
+@import './components/prizebar.scss';
+@import './components/historyRecord.scss';
+@import './components/winnerInfo.scss';

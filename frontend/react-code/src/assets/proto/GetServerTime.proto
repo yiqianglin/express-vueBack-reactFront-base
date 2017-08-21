@@ -1,0 +1,9 @@
+	syntax = "proto3";
+	package com.xunleijr.game.vo ;
+
+	message GetServerTimeResult{
+		string code = 1 ;
+		string msg = 2 ;
+		int64 time = 3;
+	}
+

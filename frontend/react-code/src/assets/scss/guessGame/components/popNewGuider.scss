@@ -1,0 +1,602 @@
+@import '../../lib/lib-variables.scss';
+
+.pop-show.new-guide-wrap
+{
+    z-index: $zIndex-9;
+    .p-text1
+    {
+        animation: fadeText 3.5s ease ;
+    }
+    .p-text2
+    {
+        animation: fadeText 3.5s ease 3.5s ;
+    }
+    .light
+    {
+        animation: rotateLight 2s linear 3.5s infinite, fadeLight 3.5s ease 3.5s;
+    }
+    .gift
+    {
+        animation: scaleGit 1s linear 3.5s, fadeLight 3.5s ease 3.5s;
+    }
+    .chart-bg
+    {
+        animation: fadeGuideOut .5s ease 7s forwards;
+
+        .chart-line
+        {
+            animation: fadeGuideOut .5s ease 7s forwards;
+        }
+
+        .tip01
+        {
+            animation: fadeText 2s ease 7.5s forwards;
+        }
+        .btn
+        {
+            animation: fadeGuideOut .5s ease 9.5s forwards, btnBreath 1s ease 9.5s infinite;
+        }
+        .tip02
+        {
+            animation: fadeGuideOut .5s ease 10s forwards;
+        }
+    }
+    &.step2
+    {
+        .bg-top
+        {
+            .chart-bg
+            {
+                // animation: fadeGuideIn .5s ease 14.5s forwards;
+                opacity: 1;
+            }
+            .chart-line
+            {
+                animation: lineAnim 14s steps(6) .5s forwards;
+
+                opacity: 1;
+                background-position: -750px 0;
+            }
+        }
+        .btn
+        {
+            animation: fadeGuideIn .5s ease;
+        }
+        .tip02
+        {
+            animation: fadeGuideIn .5s ease;
+        }
+        .icon01
+        {
+            animation: fadeText 2.5s ease 2.5s;
+        }
+        .tip03
+        {
+            animation: fadeText 1.5s ease 3s;
+        }
+        .icon02
+        {
+            animation: fadeText 2.5s ease 5s;
+        }
+        .tip04
+        {
+            animation: fadeText 1.5s ease 5.5s;
+        }
+        .icon03
+        {
+            animation: fadeText 2.5s ease 7.5s;
+        }
+        .tip05
+        {
+            animation: fadeText 1.5s ease 8s;
+        }
+        .icon04
+        {
+            animation: fadeText 2.5s ease 10s;
+        }
+        .tip06
+        {
+            animation: fadeText 1.5s ease 10.5s;
+        }
+        .chart-mask
+        {
+            z-index: 0;
+
+            animation: fadeMaskOut .5s ease 14.5s forwards;
+        }
+        .hit
+        {
+            z-index: 0;
+
+            animation: hitAnim .5s steps(2) infinite 13s,fadeGuideOut .5s ease 14.5s forwards;
+        }
+    }
+}
+.new-guide-wrap
+{
+    font-family: 'Mircosoft YaHei';
+
+    position: absolute;
+    z-index: -1;
+    top: 0;
+
+    width: 100%;
+    height: 100%;
+
+    text-align: center;
+    .bg-top
+    {
+        font-size: 36px;
+        line-height: 48px;
+
+        height: 978px;
+
+        color: #fff;
+        background: url('../../img/pop/newGuide/top-bg.jpg') no-repeat center;
+        background-size: 750px;
+        .p-text1
+        {
+            position: absolute;
+            top: 261px;
+            right: 0;
+            left: 0;
+
+            width: 444px;
+            height: 162px;
+            margin: auto;
+            padding-top: 36px;
+
+            opacity: 0;
+            border-radius: 8px;
+            background-color: #f96153;
+            box-shadow: 0 6px 0 #b43e3e;
+        }
+        .p-text2
+        {
+            position: absolute;
+            top: 161px;
+            right: 0;
+            left: 0;
+
+            width: 500px;
+            height: 180px;
+            margin: auto;
+            padding-top: 28px;
+
+            opacity: 0;
+            border-radius: 8px;
+            background-color: #f96153;
+            box-shadow: 0 6px 0 #b43e3e;
+            span
+            {
+                font-size: 24px;
+                line-height: 32px;
+            }
+        }
+        .light
+        {
+            position: absolute;
+            top: 369px;
+            right: 0;
+            left: 0;
+
+            width: 588px;
+            height: 588px;
+            margin: auto;
+
+            opacity: 0;
+            background: url('../../img/pop/newGuide/light.png') no-repeat center;
+            background-size: 588px;
+        }
+        .gift
+        {
+            position: absolute;
+            top: 369px;
+            right: 0;
+            left: 0;
+
+            width: 588px;
+            height: 588px;
+            margin: auto;
+
+            opacity: 0;
+            background: url('../../img/pop/newGuide/gift.png') no-repeat center;
+            background-size: 588px;
+        }
+        .chart-bg
+        {
+            position: absolute;
+            top: 96px;
+            right: 0;
+            left: 0;
+
+            width: 750px;
+            height: 500px;
+
+            opacity: 0;
+            background: url('../../img/pop/newGuide/chart-bg.png') no-repeat center;
+            background-size: 750px;
+
+            .chart-line
+            {
+                position: absolute;
+                top: 152px;
+
+                width: 750px;
+                height: 220px;
+
+                opacity: 0;
+                background: url('../../img/pop/newGuide/chart-line.png') no-repeat;
+                background-size: 6000px;
+            }
+
+            .tip01
+            {
+                font-size: 20px;
+
+                position: absolute;
+                top: 199px;
+                left: 211px;
+
+                width: 180px;
+                height: 71px;
+
+                opacity: 0;
+                background: url('../../img/pop/newGuide/tip01-bg.png') no-repeat center;
+                background-size: 180px;
+            }
+            .tip02
+            {
+                font-size: 20px;
+                line-height: 1.5;
+
+                position: absolute;
+                top: 372px;
+                left: 147px;
+
+                width: 384px;
+                height: 117px;
+                padding-top: 14px;
+
+                opacity: 0;
+                background: url('../../img/pop/newGuide/tip02-bg.png') no-repeat center;
+                background-size: 384px;
+            }
+            .btn
+            {
+                position: absolute;
+                bottom: -168px;
+                left: 109px;
+
+                width: 169px;
+                height: 168px;
+
+                opacity: 0;
+                background: url('../../img/pop/newGuide/btn-bg.png') no-repeat center;
+                background-size: 169px;
+            }
+        }
+    }
+    .bg-bottom
+    {
+        line-height: 56px;
+
+        position: absolute;
+        bottom: 0;
+
+        width: 100%;
+        height: 228px;
+
+        color: #fff;
+        background: url('../../img/pop/newGuide/bottom-bg.jpg') no-repeat center;
+        background-size: 750px;
+        .icon01
+        {
+            position: absolute;
+            top: 5px;
+            left: 44px;
+
+            width: 100px;
+            height: 100px;
+
+            opacity: 0;
+            background: url('../../img/pop/newGuide/icon01.png') no-repeat center;
+            background-size: 100px;
+        }
+        .icon02
+        {
+            position: absolute;
+            top: 5px;
+            left: 156px;
+
+            width: 100px;
+            height: 100px;
+
+            opacity: 0;
+            background: url('../../img/pop/newGuide/icon02.png') no-repeat center;
+            background-size: 100px;
+        }
+        .icon03
+        {
+            position: absolute;
+            top: 5px;
+            right: 154px;
+
+            width: 327px;
+            height: 100px;
+
+            opacity: 0;
+            background: url('../../img/pop/newGuide/icon03.png') no-repeat center;
+            background-size: 327px;
+        }
+        .icon04
+        {
+            position: absolute;
+            top: 5px;
+            right: 40px;
+
+            width: 104px;
+            height: 100px;
+
+            opacity: 0;
+            background: url('../../img/pop/newGuide/icon04.png') no-repeat center;
+            background-size: 104px;
+        }
+        .tip03
+        {
+            font-size: 20px;
+
+            position: absolute;
+            top: -80px;
+            left: 47px;
+
+            width: 130px;
+            height: 76px;
+
+            opacity: 0;
+            background: url('../../img/pop/newGuide/tip03-bg.png') no-repeat center;
+            background-size: 130px;
+        }
+        .tip04
+        {
+            font-size: 20px;
+
+            position: absolute;
+            top: -80px;
+            left: 164px;
+
+            width: 130px;
+            height: 76px;
+
+            opacity: 0;
+            background: url('../../img/pop/newGuide/tip03-bg.png') no-repeat center;
+            background-size: 130px;
+        }
+        .tip05
+        {
+            font-size: 20px;
+
+            position: absolute;
+            top: -84px;
+            left: 278px;
+
+            width: 320px;
+            height: 81px;
+
+            opacity: 0;
+            background: url('../../img/pop/newGuide/tip04-bg.png') no-repeat center;
+            background-size: 320px;
+        }
+        .tip06
+        {
+            font-size: 20px;
+
+            position: absolute;
+            top: -80px;
+            right: 63px;
+
+            width: 140px;
+            height: 80px;
+
+            opacity: 0;
+            background: url('../../img/pop/newGuide/tip05-bg.png') no-repeat center;
+            background-size: 140px;
+        }
+        .close
+        {
+            font-size: 30px;
+            line-height: 1;
+
+            position: absolute;
+            bottom: 76px;
+
+            padding-bottom: 7px;
+
+            transform: translateX(-50%);
+
+            color: #fff;
+            border-bottom: 2px solid #fff;
+        }
+    }
+    .chart-mask
+    {
+        position: absolute;
+        z-index: -1;
+        top: 0;
+
+        width: 100%;
+        height: 100%;
+
+        background-color: rgba(#000,0);
+    }
+    .hit
+    {
+        line-height: 1;
+
+        position: absolute;
+        z-index: -1;
+        top: 222px;
+        right: 0;
+        left: 0;
+
+        width: 617px;
+        height: 596px;
+        margin: auto;
+        padding-top: 204px;
+
+        opacity: 0;
+        color: #fff;
+        background: url('../../img/pop/newGuide/hit-bg.png') no-repeat;
+        background-size: 1234px;
+        .p-tt
+        {
+            font-size: 36px;
+
+            margin-bottom: 30px;
+            padding-right: 30px;
+        }
+        .p-text3
+        {
+            font-size: 24px;
+            line-height: 1.5;
+
+            margin-bottom: 114px;
+            padding-right: 30px;
+        }
+        .bottom-text
+        {
+            font-size: 24px;
+
+            margin-top: 24px;
+        }
+        .btn-end
+        {
+            line-height: 60px;
+
+            display: inline-block;
+
+            width: 240px;
+            height: 60px;
+            margin-right: 30px;
+
+            color: #fff;
+            border-radius: 10px;
+            background-color: #f96153;
+            box-shadow: 0 6px 0 #b43e3e;
+        }
+    }
+}
+
+@keyframes fadeText
+{
+    0%
+    {
+        opacity: 0;
+    }
+    20%,
+    80%
+    {
+        opacity: 1;
+    }
+    100%
+    {
+        opacity: 0;
+    }
+}
+@keyframes fadeLight
+{
+    0%,
+    99%
+    {
+        opacity: 1;
+    }
+    100%
+    {
+        opacity: 0;
+    }
+}
+@keyframes rotateLight
+{
+    0%
+    {
+        transform: rotateZ(0deg);
+    }
+    100%
+    {
+        transform: rotateZ(360deg);
+    }
+}
+@keyframes scaleGit
+{
+    0%
+    {
+        transform: scale(0,0);
+    }
+    100%
+    {
+        transform: scale(1,1);
+    }
+}
+@keyframes fadeGuideOut
+{
+    0%
+    {
+        opacity: 0;
+    }
+    100%
+    {
+        opacity: 1;
+    }
+}
+@keyframes fadeGuideIn
+{
+    0%
+    {
+        opacity: 1;
+    }
+    100%
+    {
+        opacity: 0;
+    }
+}
+@keyframes fadeMaskOut
+{
+    0%
+    {
+        background-color: rgba(#000,0);
+    }
+    100%
+    {
+        background-color: rgba(#000,.4);
+    }
+}
+@keyframes btnBreath
+{
+    0%
+    {
+        transform: scale(1,1);
+    }
+    50%
+    {
+        transform: scale(1.2,1.2);
+    }
+    100%
+    {
+        transform: scale(1,1);
+    }
+}
+@keyframes hitAnim
+{
+    100%
+    {
+        background-position: -1234px 0;
+    }
+}
+@keyframes lineAnim
+{
+    100%
+    {
+        opacity: 1;
+        background-position: -5250px 0;
+    }
+}

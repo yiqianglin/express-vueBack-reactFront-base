@@ -1,0 +1,17 @@
+syntax = "proto3";
+package com.xunleijr.game.vo.updown;
+
+message PlayTypeInfoResult {
+    string code = 1;
+    string msg = 2;
+    int32 intervalTimeSec = 3;
+    int32 termTimeSec = 4;
+    int32 totalTimeSec = 5;
+    repeated OptionInfo optionInfoList = 6;
+}
+
+message OptionInfo{
+    int32 optionId = 1;
+    int32 optionValue = 2;
+    int32 userBetAmount = 3;
+}

@@ -1,0 +1,80 @@
+@import '../../lib/lib-variables.scss';
+
+// 休市弹窗
+.pop-show.pop-closePeriod
+{
+    .pop-mask
+    {
+        z-index: $zIndex-3;
+    }
+    .pop-body-closePeriod
+    {
+        z-index: $zIndex-4;
+
+        transform: translate3d(-50%,0,0);
+    }
+}
+.pop-body-closePeriod
+{
+    font-family: 'REDOCN';
+    line-height: 1;
+
+    position: absolute;
+    bottom: 220px;
+    left: 50%;
+
+    width: 670px;
+    height: 400px;
+    padding-top: 100px;
+
+    transition: .3s transform ease;
+    transform: translate3d(-50%,600px,0);
+    text-align: center;
+
+    background: url('../../img/pop/closePeriod/pop-bg.png') no-repeat center;
+    background-size: 670px;
+    .close-title
+    {
+        font-size: 55px;
+
+        margin-bottom: 24px;
+
+        color: #ff6441;
+    }
+    .close-sub-title
+    {
+        font-size: 40px;
+
+        margin-bottom: 56px;
+
+        color: #ed7924;
+    }
+    .close-btn
+    {
+        font-size: 36px;
+        line-height: 60px;
+
+        display: inline-block;
+
+        width: 180px;
+        margin-right: 40px;
+
+        color: #7f3203;
+        border: 4px solid #7f3203;
+        border-radius: 75px;
+    }
+    .return-btn
+    {
+        font-size: 36px;
+        line-height: 75px;
+
+        display: inline-block;
+
+        width: 258px;
+        height: 75px;
+
+        color: #7f3203;
+        background: url('../../img/pop/closePeriod/btn-bg.png') no-repeat center;
+        background-size: 258px;
+    }
+}

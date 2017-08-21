@@ -1,0 +1,88 @@
+@import '../../lib/lib-variables.scss';
+@import '../../lib/lib-mixin.scss';
+
+/* 顶部导航条*/
+.record-bar
+{
+    position: fixed;
+
+    width: 100%;
+    height: 124px;
+    margin-top: -1px;
+    padding: 16px 36px 23px 31px;
+
+    background: url('../../img/eggGame/record-bar-bg.png') no-repeat center;
+    -moz-background-size: 100%;
+         background-size: 100%;
+
+    .link-block
+    {
+        font-size: 0;
+
+        overflow: hidden;
+
+        width: 453px;
+        height: 69px;
+        margin-left: 120px;
+
+        background: url('../../img/eggGame/record-nav-bg.png') no-repeat center;
+        -moz-background-size: 100%;
+             background-size: 100%;
+    }
+    .nav-link
+    {
+        font-size: 28px;
+        line-height: 81px;
+
+        display: inline-block;
+
+        width: 50%;
+        height: 100%;
+
+        text-align: center;
+        letter-spacing: .8px;
+
+        color: #fff;
+        // text-shadow: rgba(137, 64, 0, .75) 1px 0 0,rgba(137, 64, 0, .75) 0 2px 0,rgba(137, 64, 0, .75) -1px 0 0,rgba(137, 64, 0, .75) 0 -1px 0;
+
+        @include text-stroke(rgba(137, 64, 0, .75));
+
+
+        &.classic-link
+        {
+            background: url('../../img/eggGame/record-classic-bg.png') no-repeat center;
+            -moz-background-size: 100%;
+                 background-size: 100%;
+            &.active
+            {
+                background-image: url('../../img/eggGame/record-classic-bg_active.png');
+            }
+        }
+        &.misson-link
+        {
+            background: url('../../img/eggGame/record-misson-bg.png') no-repeat center;
+            -moz-background-size: 100%;
+                 background-size: 100%;
+            &.active
+            {
+                background-image: url('../../img/eggGame/record-misson-bg_active.png');
+            }
+        }
+    }
+    .return-link
+    {
+        display: inline-block;
+        float: left;
+
+        width: .69rem;
+        height: .69rem;
+        padding-left: 20px;
+
+        color: #996415;
+        background: url('../../img/eggGame/btn-return.png') no-repeat center left;
+        -moz-background-size: 69px;
+             background-size: 69px;
+    }
+}
+
+@import './winnerList.scss';

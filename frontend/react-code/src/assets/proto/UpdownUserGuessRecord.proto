@@ -1,0 +1,30 @@
+syntax = "proto3";
+package com.xunleijr.game.vo;
+
+message UpdownUserGuessRecordResult {
+    string code = 1;
+    string msg = 2;
+    repeated RecordList list = 3;
+}
+
+message RecordList {
+    int64 gameDate = 1;
+    int32 totalTerm = 2;
+    int32 dayTerm = 3;
+    int32 type = 4;
+    repeated RecordDetailList detailList = 5;
+    double standMarket = 6;
+    double endMarket = 7;
+}
+
+message RecordDetailList {
+    int32 guessType = 1;
+    int32 guessScore = 2;
+    double marketValue = 3;
+    double odds = 4;
+    int32 result = 5;
+    int32 score = 6;
+    int64 createTime = 7;
+    int32 playType = 8;
+    string optionValue = 9;
+}

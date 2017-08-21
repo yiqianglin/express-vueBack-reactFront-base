@@ -1,0 +1,28 @@
+@charset "UTF-8";
+
+//-----------------------------------------------------
+// helper scss
+//-----------------------------------------------------
+
+
+.u-floatLeft {
+    float: left;
+}
+.u-floatRight {
+    float: right;
+}
+.u-clearfix {//用于空元素
+    @include clearfix(false,false);
+}
+.u-clearP {//用于父元素
+    @include clearfix(false);
+}
+.u-ellipsis {
+	@extend %ellipsis;
+}
+.u-fixedBottom {
+    @include fixed(bottom);
+}
+.u-hide {
+    display: none;
+}

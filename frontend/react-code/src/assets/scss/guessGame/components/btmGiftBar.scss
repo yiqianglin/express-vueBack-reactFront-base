@@ -1,0 +1,200 @@
+@import '../../lib/lib-variables.scss';
+
+.btm-gift-bar
+{
+    position: absolute;
+    bottom: 114px;
+    left: 25px;
+
+    display: flex;
+    flex-direction: row;
+
+    width: 700px;
+    height: 114px;
+    padding: 0 20px;
+
+    background: url('../../img/game/btm-gift-bg.png');
+    background-size: 700px;
+
+    justify-content: space-around;
+    align-items: center;
+
+    .item-wrp
+    {
+        position: relative;
+
+        width: 100px;
+        height: 100px;
+        padding: 4px;
+
+        border-radius: 50%;
+        background: #79270a;
+        &.hide
+        {
+            display: none;
+        }
+        .disable-mask
+        {
+            position: absolute;
+            top: 0;
+            left: 0;
+
+            display: block;
+
+            width: 100px;
+            height: 100px;
+
+            border-radius: 50%;
+            background: rgba(#55290c,.5);
+            &.hide
+            {
+                display: none;
+            }
+            .circle-wrapper
+            {
+                position: absolute;
+                top: 0;
+
+                overflow: hidden;
+
+                width: 50px;
+                height: 100px;
+                &.right
+                {
+                    right: 0;
+                }
+                &.left
+                {
+                    left: 0;
+                }
+            }
+            .circleProgress
+            {
+                position: absolute;
+                top: 0;
+
+                width: 100px;
+                height: 100px;
+
+                transition: transform .5s linear;
+                transform: rotate(-135deg);
+
+                border: 8px solid #7d2f08;
+                border-radius: 50%;
+            }
+            .rightcircle
+            {
+                right: 0;
+
+                border-top: 8px solid #efad1c;
+                border-right: 8px solid #efad1c;
+                // -webkit-animation: circleProgressLoad_right 5s linear infinite;
+                // -webkit-transform: rotate(-135deg);
+            }
+            .leftcircle
+            {
+                left: 0;
+
+                border-bottom: 8px solid #efad1c;
+                border-left: 8px solid #efad1c;
+                // -webkit-animation: circleProgressLoad_left 5s linear infinite;
+                // transform: rotate(-135deg);
+            }
+        }
+        .item
+        {
+            display: block;
+
+            width: 92px;
+            height: 92px;
+
+            border-radius: 50%;
+            background: radial-gradient(center ,circle, #55290c,#562911);
+            &.active
+            {
+                border: 3px solid #f2af11;
+            }
+            &.disable
+            {
+                padding-top: 3px;
+            }
+            &.to-get
+            {
+                font-size: 30px;
+                line-height: 92px;
+
+                text-align: center;
+
+                color: #fedb6e;
+                // text-shadow: 0 0 #933501;
+                text-shadow: #8d3000 3px 0 0,#8d3000 0 3px 0,#8d3000 -3px 0 0,#8d3000 0 -3px 0;
+            }
+            &.gift-item
+            {
+                font-family: 'Mircosoft YaHei';
+
+                position: relative;
+
+                display: flex;
+                flex-direction: column;
+                .gift-img
+                {
+                    display: flex;
+
+                    height: 60px;
+
+                    justify-content: center;
+                    align-items: flex-end;
+                    img
+                    {
+                        height: 50px;
+                    }
+                }
+                .gift-name
+                {
+                    font-size: 16px;
+                    font-weight: bold;
+                    line-height: 1;
+
+                    text-align: center;
+
+                    color: #fedd75;
+
+                    flex: 1;
+                }
+
+                .num
+                {
+                    font-size: 14px;
+                    line-height: 32px;
+
+                    position: absolute;
+                    top: 0;
+                    right: 0;
+
+                    display: inline-block;
+
+                    width: 32px;
+                    height: 32px;
+
+                    text-align: center;
+
+                    color: #ffdf4a;
+                    border: 2px solid #f2af11;
+                    border-radius: 50%;
+                    background: #55290c;
+                    &.red
+                    {
+                        color: #ffdf4a;
+                        border: none;
+                        background-image: url('../../img/sprites/game-btn/task-bg.png');
+                        background-size: 32px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@import './taskTip.scss';
+@import './popToastTask.scss';

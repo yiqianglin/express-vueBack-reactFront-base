@@ -1,0 +1,55 @@
+@import '../lib/lib-variables';
+@import '../lib/lib-mixin';
+@import '../lib/lib-reset';
+@import '../lib/lib-help';
+
+@font-face {
+    font-family: "Skranji";
+    src: url("../../font/Skranji.eot"); /* IE9 */
+    src: url("../../font/Skranji.eot?#iefix") format("embedded-opentype"), /* IE6-IE8 */
+    url("../../font/Skranji.woff") format("woff"), /* chrome, firefox */
+    url("../../font/Skranji.ttf") format("truetype"), /* chrome, firefox, opera, Safari, Android, iOS 4.2+ */
+    url("../../font/Skranji.svg#Skranji") format("svg"); /* iOS 4.1- */
+    font-style: normal;
+    font-weight: normal;
+}
+@font-face {
+    font-family: "NotoSansHans";
+    src: url("../../font/NotoSansHans.eot"); /* IE9 */
+    src: url("../../font/NotoSansHans.eot?#iefix") format("embedded-opentype"), /* IE6-IE8 */
+    url("../../font/NotoSansHans.woff") format("woff"), /* chrome, firefox */
+    url("../../font/NotoSansHans.ttf") format("truetype"), /* chrome, firefox, opera, Safari, Android, iOS 4.2+ */
+    url("../../font/NotoSansHans.svg#NotoSansHans") format("svg"); /* iOS 4.1- */
+    font-style: normal;
+    font-weight: normal;
+}
+#root
+{
+    height: 100%;
+    min-height: 100%;
+}
+.app-wrapper
+{
+    font-family: $fontFamily;
+    display: flex;
+    flex-direction: column;
+
+    width: 100%;
+    max-width: 7.5rem;
+    height: 100%;
+    min-height: 100%;
+    margin: 0;
+
+    background-color: nth($colorBg,2);
+}
+
+@import '../common/pop.scss';
+@import '../common/popToast.scss';
+@import '../common/popGetGold.scss';
+@import '../common/popSign.scss';
+@import '../common/popSignSucc.scss';
+@import '../common/popLotteryGuide.scss';
+@import './components/loadingLayer.scss';
+@import './components/eggAnimation.scss';
+@import './components/popGameRule.scss';
+@import './components/popShare.scss';

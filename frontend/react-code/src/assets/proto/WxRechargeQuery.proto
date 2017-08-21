@@ -1,0 +1,14 @@
+syntax = "proto3";
+package com.xunleijr.game.vo ;
+
+message WxRechargeQueryResult{
+    string code = 1 ;
+    string msg = 2 ;
+    int32 orderStatus = 3;
+    string resultMsg = 4;
+    int32 rechargeScore = 5;
+    int32 rechargeMoney = 6;
+    int32 userScore = 7;
+    string requestNo = 8;
+    string transactionId = 9;
+}

@@ -1,0 +1,20 @@
+
+syntax = "proto3";
+package com.xunleijr.game.vo;
+
+message TaskListResult {
+    string code = 1;
+    string msg = 2;
+    repeated Task tasks = 3;
+}
+
+message Task {
+    string taskName = 1;
+    string description = 2;
+    string imageUrl = 3;
+    int32 taskId = 4;
+    int32 target = 5;
+    int32 done = 6;
+    int32 lotteryTimes = 7;
+    int32 acceptStatus = 8;
+}

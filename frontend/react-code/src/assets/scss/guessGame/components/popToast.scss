@@ -1,0 +1,64 @@
+@import '../../lib/lib-variables.scss';
+
+//toast弹窗样式
+.pop-show.pop-toast
+{
+    position: fixed;
+    z-index: $zIndex-9;
+
+    text-align: center;
+    .pop-mask
+    {
+        z-index: $zIndex-8;
+    }
+    .pop-body-toast
+    {
+        z-index: $zIndex-9;
+
+        transform: translate3d(-50%, -3rem,0);
+        animation: fadeIn 1s 1.5s forwards;
+
+        opacity: 1;
+    }
+}
+.pop-body-toast
+{
+    font-size: 24px;
+
+    left: 50%;
+
+    display: flex;
+
+    width: auto;
+    max-width: 500px;
+    padding: 24px;
+
+    transition: transform .5s ease;
+    transform: translate3d(-50%, 100%,0);
+    text-align: left;
+    word-break: break-all;
+
+    opacity: 0;
+    color: #fff;
+    border-radius: 10px;
+    background-color: rgba(0,0,0,.7);
+
+    align-items: center;
+    .icon
+    {
+        width: 36px;
+        height: 36px;
+        margin-right: 24px;
+
+        border-radius: 50%;
+        background-color: #fff;
+
+        align-self: center;
+        flex-shrink: 0;
+        &.succ
+        {
+            background: url('../../img/pop/pop-icon-succ.png') no-repeat center;
+            background-size: 36px;
+        }
+    }
+}

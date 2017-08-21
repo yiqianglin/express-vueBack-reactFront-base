@@ -1,0 +1,47 @@
+@import '../lib/lib-variables';
+
+.game-level-wrap
+{
+    position: relative;
+
+    height: 100%;
+
+    background: url('../../img/eggGame/level-wrap-bg.png') no-repeat top #1f1137;
+    background-size: 750px;
+}
+.game-level-area
+{
+    position: relative;
+
+    display: flex;
+    flex-direction: column;
+
+    width: 100%;
+    height: 1083px;
+    padding: 386px 15px 14px;
+
+    background: url('../../img/eggGame/smash-bg01.png') no-repeat bottom;
+    background-size: 720px 975px;
+
+    justify-content: flex-end;
+    &.level2
+    {
+        padding-top: 291px;
+
+        background-image: url('../../img/eggGame/smash-bg02.png');
+        background-size: 720px 1067px;
+        .game-tip
+        {
+            top: 170px;
+        }
+    }
+}
+
+@import './components/navBar.scss';
+@import './components/bottomBar.scss';
+@import './components/levelInfo.scss';
+@import './components/gametip.scss';
+@import './components/eggArea.scss';
+@import './components/prizebar.scss';
+@import './components/winnerInfo.scss';
+@import './components/popSmashResult.scss';

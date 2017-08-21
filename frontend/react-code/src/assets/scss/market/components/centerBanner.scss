@@ -1,0 +1,98 @@
+@import '../../lib/lib-variables.scss';
+
+.banner-part
+{
+    position: relative;
+
+    padding: 28px 68px 22px;
+
+    .banner
+    {
+        position: relative;
+
+        overflow: hidden;
+
+        width: 610px;
+        height: 130px;
+        margin: 0 auto;
+        padding: 8px;
+
+        background: url('../../../img/gameCenter/home/banner-bg.png') no-repeat center;
+        background-size: 610px;
+        .inner-wrapper
+        {
+            width: 100%;
+            height: 114px;
+        }
+        .banner-img
+        {
+            width: 100%;
+            height: 114px;
+        }
+        .banner-link
+        {
+            display: inline-block;
+
+            width: 100%;
+            height: 112px;
+        }
+        .page-index-con
+        {
+            line-height: 39px;
+
+            position: relative;
+            z-index: 2;
+
+            height: 39px;
+            margin-top: -30px;
+
+            text-align: center;
+            .dec
+            {
+                display: inline-block;
+
+                width: 20px;
+                height: 20px;
+                margin-right: 25px;
+
+                background-size: 100%;
+                &:nth-last-of-type(1)
+                {
+                    margin-right: 0;
+                }
+            }
+            .on
+            {
+                width: 12px;
+                height: 12px;
+
+                border: 2px solid #c6af69;
+                border-radius: 50%;
+                background: #fff;
+            }
+            .off
+            {
+                width: 12px;
+                height: 12px;
+
+                border: 2px solid #c6af69;
+                border-radius: 50%;
+                background: #f49808;
+            }
+        }
+    }
+
+    .banner-lates
+    {
+        position: absolute;
+        z-index: $zIndex-2;
+        top: 52px;
+        left: 30px;
+
+        width: 146px;
+        height: 117px;
+
+        background: url('../../../img/gameCenter/home/banner-new.png') no-repeat center;
+        background-size: 146px;
+    }
+}

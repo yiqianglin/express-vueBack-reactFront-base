@@ -1,0 +1,38 @@
+@import '../lib/lib-variables';
+@import '../lib/lib-mixin';
+@import '../lib/lib-reset';
+@import '../lib/lib-help';
+html,
+body
+{
+    overflow: auto;
+}
+
+#root
+{
+    height: 100%;
+    min-height: 100%;
+}
+.app-wrapper
+{
+    display: flex;
+    flex-direction: column;
+
+    width: 100%;
+    max-width: 7.5rem;
+    min-height: 100%;
+    margin: 0;
+
+    background-color: #b5251d;
+}
+
+.hide
+{
+    display: none;
+}
+
+@import '../common/pop.scss';
+@import '../common/popToast.scss';
+@import '../common/popGetGold.scss';
+@import './components/popShare.scss';
+@import './components/loadingLayer.scss';

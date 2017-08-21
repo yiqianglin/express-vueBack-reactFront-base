@@ -1,0 +1,29 @@
+syntax = "proto3";
+package com.xunleijr.game.vo;
+
+message UpdownRoundInfoResult {
+    string code = 1;
+    string msg = 2;
+
+    int64 gameDate = 3;
+    int32 totalTerm = 4;
+    int32 dayTerm = 5;
+    int32 type = 6;
+    double startMarket = 7;
+    double standMarket = 8;
+    int64 startTime = 9;
+    int64 blockTime = 10;
+    int64 endTime = 11;
+    int32 intervalTimeSec = 12;
+    int32 termTimeSec = 13;
+    int32 status = 14;
+    int32 upUserNum = 15;
+    int32 downUserNum = 16;
+    int32 upBetScore = 17;
+    int32 downBetScore = 18;
+    double upOdds = 19;
+    double downOdds = 20;
+    int64 nextOpenTs = 21;
+    int32 userUpScore = 22;
+    int32 userDownScore = 23;
+}

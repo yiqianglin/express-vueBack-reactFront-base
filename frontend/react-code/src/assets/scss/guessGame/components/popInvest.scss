@@ -1,0 +1,159 @@
+@import '../../lib/lib-variables.scss';
+
+// 左右两侧投注人气泡
+.pop-side-invest
+{
+    font-family: '微软雅黑', 'Arial', 'MicrosoftYaHei','Heiti SC','Helvetica','Droidsansfallback';
+    font-size: 20px;
+    line-height: 1;
+
+    position: absolute;
+    top: 440px;
+
+    width: 200px;
+    height: 80px;
+
+    transition: all 1s ease-in-out;
+
+    color: #fff;
+    background: rgba(0,0,0,.7);
+
+    .avator
+    {
+        position: absolute;
+        // top: 7px;
+
+        width: 64px;
+        height: 64px;
+        margin-top: 8px;
+
+        border-radius: 50%;
+    }
+
+    .name-p
+    {
+        overflow: hidden;
+
+        width: 100%;
+
+        white-space: nowrap;
+        text-overflow: ellipsis;
+    }
+
+    .invest-p
+    {
+        span
+        {
+            margin-left: 1px;
+
+            color: #dc9040;
+        }
+    }
+
+    &.side-left
+    {
+        transform: translate(-200px,0);
+
+        border-radius: 0 35px 35px 0;
+        .avator
+        {
+            margin-left: 2px;
+        }
+        .name-p
+        {
+            padding-top: 14px;
+            padding-right: 15px;
+            padding-left: 70px;
+        }
+        .invest-p
+        {
+            padding-top: 10px;
+            padding-left: 70px;
+        }
+    }
+
+    &.side-right
+    {
+        right: 0;
+
+        transform: translate(200px,0);
+
+        border-radius: 35px 0 0 35px;
+        .avator
+        {
+            right: 0;
+
+            margin-right: 2px;
+        }
+        .name-p
+        {
+            padding-top: 14px;
+            padding-right: 70px;
+            padding-left: 15px;
+        }
+        .invest-p
+        {
+            padding-top: 10px;
+            padding-right: 70px;
+            padding-left: 15px;
+        }
+    }
+
+    &.get-prize
+    {
+        top: 100px;
+
+        width: 433px;
+        height: 99px;
+
+        transform: translate(-433px, 0px);
+
+        color: #41290e;
+        background: url('../../img/pop/pop-getPrize.png') no-repeat center;
+        background-size: 433px;
+        .avator
+        {
+            margin-top: 18px;
+            margin-left: 32px;
+        }
+        .name-p
+        {
+            font-size: 24px;
+            font-weight: bold;
+
+            padding-top: 22px;
+            padding-right: 70px;
+            padding-left: 140px;
+        }
+        .invest-p
+        {
+            font-size: 20px;
+
+            overflow: hidden;
+
+            width: 100%;
+            padding-right: 70px;
+            padding-left: 140px;
+
+            white-space: nowrap;
+            text-overflow: ellipsis;
+        }
+    }
+}
+
+.pop-side-invest.pop-show
+{
+    // transform: translate(0,0);
+    &.side-left
+    {
+        animation: slideLeftOut 1s ease-in-out both, slideLeftIn 1s ease-in-out 3s forwards;
+    }
+    &.side-right
+    {
+        animation: slideRightOut 1s ease-in-out both, slideRightIn 1s ease-in-out 3s forwards;
+    }
+    &.get-prize
+    {
+        animation: slideLeftOut 1s ease-in-out both, slideLeftIn2 1s ease-in-out 4s forwards;
+    }
+}

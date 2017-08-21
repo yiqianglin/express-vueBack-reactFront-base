@@ -1,0 +1,13 @@
+
+syntax = "proto3";
+package com.xunleijr.game.vo ;
+
+message GetScoreResult{
+    string type = 1;
+    string code = 2 ;
+    string msg = 3 ;
+    int32 operate = 4;
+    int32 score = 5;
+    int32 userScore = 6;
+
+}

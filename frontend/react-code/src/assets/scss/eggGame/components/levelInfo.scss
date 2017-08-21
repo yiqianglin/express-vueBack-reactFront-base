@@ -1,0 +1,127 @@
+.level-info
+{
+    font-family: 'NotoSansHans';
+    font-size: 20px;
+
+    text-align: center;
+
+    color: #fff;
+
+    flex: 1;
+    .levelprize
+    {
+        display: flex;
+
+        text-align: left;
+
+        justify-content: center;
+        .level-item
+        {
+            line-height: 1;
+
+            position: relative;
+
+            width: 174px;
+            height: 56px;
+            // padding-left: 16px;
+
+            text-align: center;
+
+            border: solid 1px #6887c0;
+            background-image: linear-gradient(to top, #230b46, #563b8f);
+            &:first-child
+            {
+                border-right: 0;
+                border-radius: 0 0 0 5px;
+            }
+            &:last-child
+            {
+                border-left: 0;
+                border-radius: 0 0 5px 0;
+            }
+            &.disabled
+            {
+                border-color: rgba(#6887c0, .8);
+                &:before
+                {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+
+                    width: 100%;
+                    height: 100%;
+
+                    content: '';
+
+                    background-color: rgba(#000, .5);
+                }
+            }
+            &.lock
+            {
+                &:after
+                {
+                    position: absolute;
+                    right: 6px;
+                    bottom: 6px;
+
+                    width: 18px;
+                    height: 24px;
+
+                    content: '';
+
+                    background-image: url('../../img/eggGame/lock.png');
+                    background-size: 18px;
+                }
+            }
+            .bean
+            {
+                display: inline-block;
+
+                height: 56px;
+                padding-top: 16px;
+            }
+            .icon-bean
+            {
+                padding-left: 27px;
+
+                background: url('../../img/eggGame/icon-bean.png') no-repeat right top;
+                background-size: 26px;
+            }
+            .prize-num
+            {
+                font-weight: 900;
+
+                display: inline-block;
+
+                padding-top: 16px;
+
+                background-image: linear-gradient(to top, #ffce6b, #fffebb), linear-gradient(#fc8309, #fc8309);
+                -webkit-background-clip: text;
+                        background-clip: text;
+
+                -webkit-text-fill-color: transparent;
+            }
+        }
+    }
+    .levelText
+    {
+        line-height: 44px;
+
+        display: none;
+
+        margin-top: 10px;
+        padding: 0 26px;
+
+        border: 1px solid #fff;
+        border-radius: 22px;
+        box-shadow: 0 0 10px #0084ff, inset 0 0 10px #0084ff;
+        &.level1
+        {
+            margin-top: 50px;
+        }
+        .num
+        {
+            color: #fb5b3c;
+        }
+    }
+}

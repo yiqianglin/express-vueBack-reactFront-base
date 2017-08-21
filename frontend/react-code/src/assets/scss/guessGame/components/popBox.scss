@@ -1,0 +1,118 @@
+@import '../../lib/lib-variables.scss';
+
+// 未关注宝箱弹窗
+.pop-show.pop-box
+{
+    .pop-mask
+    {
+        z-index: $zIndex-8;
+    }
+    .pop-box-content
+    {
+        z-index: $zIndex-9;
+    }
+}
+.pop-box
+{
+    .pop-box-content
+    {
+        font-family: 'REDOCN';
+        line-height: 1;
+
+        position: absolute;
+        top: 310px;
+        left: 50%;
+
+        width: 563px;
+        height: 573px;
+
+        transition: .3s transform ease;
+        transform: translate3d(-50%,-1000px,0);
+        text-align: center;
+        .pop-box-body
+        {
+            width: 563px;
+            height: 538px;
+
+            background: url('../../img/pop/subscribe/box-bg.png') no-repeat center;
+            background-size: 563px;
+        }
+        .pop-qrcode-body
+        {
+            font-size: 38px;
+
+            width: 563px;
+            height: 573px;
+
+            color: #ec7924;
+        }
+        .pop-text1
+        {
+            font-size: 48px;
+
+            margin-bottom: 22px;
+
+            color: #fe6340;
+        }
+        .pop-text2
+        {
+            font-size: 30px;
+
+            color: #ec7929;
+        }
+        .pop-text3
+        {
+            line-height: 1.2;
+
+            position: absolute;
+
+            width: 100%;
+        }
+        .pop-text4
+        {
+            position: absolute;
+            bottom: 80px;
+
+            width: 100%;
+        }
+        .highlight
+        {
+            color: #fe6340;
+            &.num
+            {
+                font-size: 48px;
+            }
+        }
+        .open-btn
+        {
+            font-family: '微软雅黑';
+            font-size: 32px;
+            font-weight: bolder;
+            line-height: 85px;
+
+            position: absolute;
+            bottom: 0;
+            left: 31.5px;
+
+            width: 500px;
+            height: 85px;
+
+            color: #f9ebbb;
+            background: url('../../img/pop/subscribe/btn-bg.png') no-repeat center;
+            background-size: 500px;
+            text-shadow: #8d3000 .02rem 0 0, #8d3000 0 .02rem 0, #8d3000 -.02rem 0 0, #8d3000 0 -.02rem 0;
+        }
+        .qrcode
+        {
+            width: 100%;
+            height: 100%;
+        }
+    }
+    &.pop-show
+    {
+        .pop-box-content
+        {
+            transform: translate3d(-50%,0,0);
+        }
+    }
+}

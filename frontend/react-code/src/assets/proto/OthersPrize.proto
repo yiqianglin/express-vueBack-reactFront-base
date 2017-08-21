@@ -1,0 +1,20 @@
+syntax = "proto3";
+package com.xunleijr.game.vo ;
+
+message OthersPrizeResult{
+    string type = 1 ;
+    string code = 2 ;
+    string msg = 3 ;
+
+    message Result {
+        int32 infoType = 1;
+        int32 mode = 2;
+        int64 showRoundId = 3;
+        string portraitUrl = 4;
+        string weixinName = 5;
+        string prizeDesc = 6;
+     }
+
+    Result result = 4;
+
+}

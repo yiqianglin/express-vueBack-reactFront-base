@@ -1,0 +1,66 @@
+@import '../../lib/lib-variables.scss';
+
+.game-tip
+{
+    font-size: 24px;
+    font-weight: bold;
+    line-height: 1.2;
+
+    position: absolute;
+    z-index: 1;
+    top: 260px;
+    left: 54%;
+
+    width: 434px;
+    margin-left: -217px;
+    padding: 16px;
+    // transition: .5s transform ease;
+
+    transform: scale(0, 0);
+    transform-origin: 40% top;
+    text-align: center;
+
+    color: #a4631a;
+    border-radius: 20px;
+    background-color: rgba(#ebe9e9,.95);
+
+    will-change: transform;
+    &.show
+    {
+        animation: scaleIn 12s ease infinite;
+    }
+
+    .tip-text
+    {
+        display: inline-block;
+
+        text-align: left;
+    }
+
+    &:before
+    {
+        position: absolute;
+        top: -25px;
+        left: 182px;
+
+        content: '';
+
+        border-width: 15px 17px 15px 7px;
+        border-style: solid;
+        border-color: transparent transparent #ebe9e9 transparent;
+    }
+}
+
+@keyframes scaleIn
+{
+    0%,
+    30%
+    {
+        transform: scale(1, 1);
+    }
+    35%,
+    100%
+    {
+        transform: scale(0, 0);
+    }
+}

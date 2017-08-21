@@ -1,0 +1,21 @@
+syntax = "proto3";
+package com.xunleijr.game.vo ;
+
+message MallRecommendProductListResult{
+    string code = 1 ;
+    string msg = 2 ;
+
+    string lotteryUrl = 3;
+    int32 lotteryNumber = 4;
+
+    message RecommendMallProduct {
+        int32 productId = 1 ;
+        string name = 2;
+        int32 needScore = 3;
+        string picUrl = 4;
+        int32 stock = 5;
+        int32 hotFlag = 6;
+    }
+
+    repeated RecommendMallProduct result = 5;
+}

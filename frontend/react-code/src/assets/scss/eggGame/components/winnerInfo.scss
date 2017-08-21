@@ -1,0 +1,150 @@
+.winner
+{
+    font-size: 24px;
+
+    position: absolute;
+    z-index: 1;
+    top: 365px;
+
+    height: 80px;
+    padding: 8px;
+
+    color: #fff;
+    background-color: rgba(#000,.7);
+
+    &.clear-level
+    {
+        top: 185px;
+
+        width: 393px;
+        height: 99px;
+        padding-top: 18px;
+        padding-bottom: 18px;
+
+        background-color: transparent;
+        background-size: 393px;
+        &.left
+        {
+            background-image: url('../../img/pop/pop-clearLevel-left.png');
+            .winner-avatar
+            {
+                left: 34px;
+            }
+            .winner-prize-info
+            {
+                padding-left: 134px;
+            }
+        }
+        &.right
+        {
+            background-image: url('../../img/pop/pop-clearLevel-right.png');
+
+            .winner-avatar
+            {
+                right: 34px;
+            }
+            .winner-prize-info
+            {
+                padding-right: 134px;
+            }
+        }
+    }
+
+    &.left
+    {
+        left: 0;
+
+        padding-right: 40px;
+
+        transform: translateX(-100%);
+        animation: sliderFromLeft 5s ease 5s;
+
+        border-radius: 0 40px 40px 0;
+        .winner-avatar
+        {
+            left: 8px;
+        }
+        .winner-prize-info
+        {
+            padding-left: 70px;
+        }
+    }
+    &.right
+    {
+        right: 0;
+
+        padding-left: 40px;
+
+        transform: translateX(100%);
+        animation: sliderFromRight 5s ease 5s;
+
+        border-radius: 40px 0 0 40px;
+
+        .winner-avatar
+        {
+            right: 8px;
+        }
+        .winner-prize-info
+        {
+            padding-right: 70px;
+        }
+    }
+    .winner-avatar
+    {
+        position: absolute;
+
+        width: 64px;
+        height: 64px;
+
+        border-radius: 64px;
+    }
+    .winner-prize-info
+    {
+        line-height: 32px;
+
+        overflow: hidden;
+
+        white-space: nowrap;
+        text-overflow: ellipsis;
+
+
+        .num
+        {
+            color: #ed3707;
+        }
+    }
+}
+
+@keyframes sliderFromLeft
+{
+    0%
+    {
+        transform: translateX(-100%);
+    }
+    20%,
+    80%
+    {
+        transform: translateX(0);
+    }
+    100%
+    {
+        transform: translateX(-100%);
+    }
+}
+
+@keyframes sliderFromRight
+{
+    0%
+    {
+        transform: translateX(100%);
+    }
+    20%,
+    80%
+    {
+        transform: translateX(0);
+    }
+    100%
+    {
+        transform: translateX(100%);
+    }
+}

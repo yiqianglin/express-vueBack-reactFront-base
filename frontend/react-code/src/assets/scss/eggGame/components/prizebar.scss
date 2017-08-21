@@ -1,0 +1,126 @@
+.prize-bar
+{
+    font-family: $fontFamily;
+
+    position: relative;
+
+    height: 148px;
+    padding: 0 27px;
+
+    &.classic
+    {
+        position: absolute;
+        bottom: 20px;
+
+        width: 7.2rem;
+
+        background: url('../../img/eggGame/prize-bg.png') no-repeat center;
+        background-size: 708px;
+        .smashegg-num
+        {
+            height: 39px;
+            padding-top: 9px;
+        }
+    }
+    .smashegg-num
+    {
+        font-size: 20px;
+        font-weight: bold;
+        line-height: 1;
+
+        height: 43px;
+        padding-top: 12px;
+        padding-left: 125px;
+
+        text-align: center;
+
+        color: #fff;
+
+        .smash-num
+        {
+            font-weight: bold;
+            line-height: 30px;
+
+            display: inline-block;
+
+            width: 24px;
+
+            color: #fcd107;
+            border-radius: 2px;
+            background-color: rgba(#0b0316, .3);
+        }
+    }
+    .prize-list
+    {
+        display: flex;
+
+        width: 100%;
+        height: 107px;
+        // padding-top: 14px;
+
+        justify-content: center;
+        .prize-item
+        {
+            font-size: 16px;
+            line-height: 1.5;
+
+            position: relative;
+
+            width: 90px;
+            height: 100%;
+            margin-right: 10px;
+            margin-left: 10px;
+            padding-top: 24px;
+
+            text-align: center;
+
+            color: #fcd107;
+            background: url('../../img/eggGame/gift-bg.png') no-repeat center;
+            background-size: 87px;
+            .product-pic
+            {
+                height: 61px;
+                &.lottery
+                {
+                    height: 41px;
+                }
+            }
+            .point
+            {
+                font-size: 20px;
+                line-height: 24px;
+
+                position: absolute;
+                top: 6px;
+                right: -12px;
+
+                width: 24px;
+                height: 24px;
+
+                color: #fff;
+                background: url('../../img/eggGame/red-point.png') no-repeat;
+                background-size: 24px;
+            }
+            .lottery-progress
+            {
+                display: flex;
+
+                justify-content: center;
+                .progress-item
+                {
+                    width: 12px;
+                    height: 20px;
+
+                    background: url('../../img/eggGame/progress.png') no-repeat center;
+                    background-size: 12px;
+                    &.active
+                    {
+                        background-image: url('../../img/eggGame/progress_active.png');
+                    }
+                }
+            }
+        }
+    }
+}
+
+@import './components/bubbleTip.scss';

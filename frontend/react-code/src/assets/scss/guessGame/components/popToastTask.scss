@@ -1,0 +1,42 @@
+@import '../../lib/lib-variables.scss';
+
+//toast弹窗样式
+.pop-show.pop-toast-task
+{
+    position: fixed;
+    z-index: $zIndex-9;
+
+    text-align: center;
+    .pop-mask
+    {
+        z-index: $zIndex-8;
+    }
+    .pop-body-toast-task
+    {
+        z-index: $zIndex-9;
+
+        animation: fadeIn 1s 3s forwards;
+
+        opacity: 1;
+    }
+}
+.pop-body-toast-task
+{
+    font-size: 24px;
+    line-height: 1.3;
+
+    position: fixed;
+    z-index: -$zIndex-1;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    padding: 10px 24px;
+
+    text-align: center;
+    word-break: break-all;
+
+    opacity: 0;
+    color: #fafde7;
+    background-color: #f86352;
+}

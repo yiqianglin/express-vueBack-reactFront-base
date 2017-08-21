@@ -1,0 +1,14 @@
+syntax = "proto3";
+package com.xunleijr.game.vo ;
+    
+message MallProductSkinServerListResult{
+    string code = 1 ;
+    string msg = 2 ;
+    message ServerInfo {
+        int32 id = 1 ;
+        string serverName = 2;
+        int32 status = 3;
+    }
+         
+    repeated ServerInfo list = 4;
+}

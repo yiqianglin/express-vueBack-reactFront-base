@@ -1,0 +1,104 @@
+@import '../lib/lib-variables.scss';
+
+// 签到成功弹窗
+.pop-show.pop-signsucc
+{
+    .pop-mask
+    {
+        z-index: $zIndex-3;
+    }
+    .pop-signsucc-content
+    {
+        z-index: $zIndex-4;
+
+        transform: translate3d(-50%,0,0);
+        animation: fadeIn .5s 3s forwards;
+
+        opacity: 1;
+    }
+}
+.pop-signsucc-content
+{
+    font-size: 45.3px;
+    line-height: 1;
+
+    position: absolute;
+    top: 145px;
+    left: 50%;
+
+    width: 682px;
+    height: 682px;
+
+    transition: .3s transform ease;
+    transform: translate3d(-50%,-1000px,0);
+    text-align: center;
+
+    opacity: 0;
+    color: #803004;
+    .pop-signsucc-bg
+    {
+        position: absolute;
+        z-index: -1;
+
+        width: 100%;
+        height: 100%;
+
+        transform: rotate(0);
+        animation: rotate 4s linear infinite;
+
+        background: url('../../img/pop/sign/signsucc_bg.png') no-repeat center;
+        background-size: 100%;
+    }
+    .sign-succ-tt
+    {
+        height: 96px;
+        margin-top: 81px;
+
+        background: url('../../img/pop/sign/signsucc-tt.png') no-repeat center;
+        background-size: 335px;
+    }
+    .get-score
+    {
+        height: 215px;
+        margin-top: 267px;
+        padding-top: 100px;
+
+        background: url('../../img/pop/sign/score-bg.png') no-repeat center;
+        background-size: 411px;
+        .score-num
+        {
+            color: #d9391b;
+        }
+    }
+    .prize-bg
+    {
+        position: absolute;
+        top: 30px;
+        left: 50%;
+
+        width: 623px;
+        height: 623px;
+        margin-left: -312px;
+        padding: 160px;
+
+        background: url('../../img/pop/sign/prize-bg.png') no-repeat center;
+        background-size: 623px;
+        img
+        {
+            width: 100%;
+            height: 100%;
+        }
+    }
+}
+
+@keyframes rotate
+{
+    from
+    {
+        transform: rotate(0);
+    }
+    to
+    {
+        transform: rotate(360deg);
+    }
+}

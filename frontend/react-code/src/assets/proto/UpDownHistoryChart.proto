@@ -1,0 +1,15 @@
+syntax = "proto3";
+package com.xunleijr.game.vo.updown;
+
+message UpDownHistoryChartResult {
+    string code = 1;
+    string msg = 2;
+    int32 lastIndex = 3;
+    repeated Point updownPointList = 4;
+    repeated Point sumPointList = 5;
+}
+
+message Point {
+    double pointValue = 1;
+    int64 pointTs = 2;
+}

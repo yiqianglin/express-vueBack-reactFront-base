@@ -1,0 +1,106 @@
+@import '../../lib/lib-variables.scss';
+
+// 协议
+.pop-body-protocol
+{
+    font-size: 28px;
+    line-height: 1.5;
+
+    position: fixed;
+    z-index: -($zIndex-1);
+
+    width: 100%;
+    height: 100%;
+    padding: 120px 70px 150px;
+
+    transition: all .5s;
+    transform: scale(0, 0);
+    word-break: break-word;
+
+    color: #fff;
+
+    .font-title
+    {
+        font-size: 36px;
+    }
+    .font-bold
+    {
+        font-weight: bold;
+    }
+    .font-middle
+    {
+        font-size: 32px;
+    }
+    .btm-margin
+    {
+        margin-bottom: 25px;
+    }
+    .txt-indent
+    {
+        text-indent: 60px;
+    }
+    .list-indent
+    {
+        text-indent: 95px;
+    }
+    .txt-left
+    {
+        text-align: left;
+    }
+    .txt-center
+    {
+        text-align: center;
+    }
+    .txt-right
+    {
+        text-align: right;
+    }
+    .title
+    {
+        line-height: 120px;
+
+        position: absolute;
+        top: 0;
+        left: 0;
+
+        width: 100%;
+        height: 120px;
+    }
+
+    .close-btn
+    {
+        position: absolute;
+        bottom: 50px;
+        left: 50%;
+
+        width: 78px;
+        height: 78px;
+
+        transform: translateX(-50%);
+
+        background: url('../../img/pop/close-btn.png') no-repeat center;
+        background-size: 68px;
+    }
+
+    .bd
+    {
+        overflow: auto;
+
+        width: 100%;
+        height: 100%;
+    }
+}
+
+.pop-protocol.pop-show
+{
+    .pop-mask
+    {
+        z-index: $zIndex-6;
+    }
+    .pop-body-protocol
+    {
+        z-index: $zIndex-6;
+
+        transform: scale(1,1);
+    }
+}

@@ -1,0 +1,15 @@
+syntax = "proto3";
+package com.xunleijr.game.vo;
+
+message UserRoundGuessRecordResult {
+    string code = 1;
+    string msg = 2;
+    repeated RecordDetailList detailList = 3;
+}
+
+message RecordDetailList {
+    int32 guessType = 1;
+    int32 guessScore = 2;
+    double marketValue = 3;
+    int64 createTime = 4;
+}

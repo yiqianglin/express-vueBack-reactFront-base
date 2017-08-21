@@ -1,0 +1,21 @@
+syntax = "proto3";
+package com.xunleijr.game.vo ;
+   
+message ExchangeRecordListResult{
+    string code = 1 ;
+    string msg = 2 ;
+    int32 pageIndex = 3;  
+    message ExchangeRecord {
+        int32 productId = 1 ;
+    int32 orderId = 2 ;
+        string productName = 3;
+        string exchangeTime = 4;
+        int32 orderStatus = 5;
+        string productPicUrl = 6;
+        int32 receivedStatus = 7;
+        int32 spendScore = 8;
+        int32 createSource = 9;
+    }
+        
+    repeated ExchangeRecord list = 4;
+}

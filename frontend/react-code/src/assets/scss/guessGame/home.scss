@@ -1,0 +1,45 @@
+@import '../lib/lib-variables';
+
+.game-wrap
+{
+    font-family: 'REDOCN';
+
+    display: flex;
+    flex-direction: column;
+
+    height: 100%;
+
+    background: url('../../img/game/game-bg.jpg') no-repeat center;
+    background-size: cover;
+
+    justify-content: space-between;
+}
+.game-area
+{
+    display: flex;
+    flex-direction: column;
+
+    flex: 1;
+    // justify-content: space-around;
+    justify-content: flex-start;
+}
+
+@import './components/navBar.scss';
+@import './components/chartArea.scss';
+@import './components/forcastRate.scss';
+@import './components/btmGiftBar.scss';
+@import './components/bottomBar.scss';
+@import './components/loadingLayer.scss';
+@import './components/goldAnimation.scss';
+@import './components/popGameRule.scss';
+@import './components/popShare.scss';
+@import './components/popInvest.scss';
+@import './components/popGuessResult.scss';
+@import './components/popFirstLogin.scss';
+@import './components/popClosePeriod.scss';
+@import './components/popReloadSocket.scss';
+@import './components/popNextRound.scss';
+@import './components/popNoGuess.scss';
+@import './components/popTask.scss';
+@import './components/popNewGuider.scss';
+@import './components/popUpgradeGuider.scss';

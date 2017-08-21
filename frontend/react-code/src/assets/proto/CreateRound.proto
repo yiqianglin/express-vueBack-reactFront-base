@@ -1,0 +1,10 @@
+syntax = "proto3";
+package com.xunleijr.game.vo.hitme ;
+            
+message CreateRoundResult{
+    string code = 1;
+    string msg = 2;
+    int32 rewardMode = 3;
+    int64 startTime = 4;
+    int64 endTime = 5;
+}

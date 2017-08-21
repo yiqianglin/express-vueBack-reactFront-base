@@ -1,0 +1,19 @@
+syntax = "proto3";
+package com.xunleijr.game.vo ;
+   
+message MallExchangeRecordListResult{
+    string code = 1 ;
+    string msg = 2 ;
+     
+    message MallExchangeRecord {
+        int32 orderId = 1;
+        string productName = 2;
+        string exchangeTime = 3;
+        string productPicUrl = 4;
+        int32 userId = 5;
+        string weixinName = 6;
+        string userPicUrl = 7;
+    }
+        
+    repeated MallExchangeRecord list = 3;
+}

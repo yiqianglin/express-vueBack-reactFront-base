@@ -1,0 +1,188 @@
+@import '../lib/lib-variables';
+
+.benevolence-wrapper{
+  background: #eeeeee;
+  width: 100%;
+  min-height: 100%;
+  .top{
+    height:280px;
+    width: 100%;
+    background-color: #92431a;
+    .left,.right{
+      float: left;
+      overflow: hidden;
+    }
+    .left{
+      width: 430px;
+      color: #fff;
+      .title{
+        font-size: 26px;
+        display: block;
+        padding: 30px 0 0 50px;
+      }
+      .benevolence-left{
+        display: block;
+        text-align: center;
+        font-weight: bold;
+        font-size: 68px;
+        padding-left: 165px;
+        margin-top: 25px;
+      }
+    }
+    .right{
+      width: 320px;
+      padding-top: 42px;
+      .icon{
+        display: block;
+        width: 206px;
+        height: 207px;
+        background: url('../../img/market/benevolence/icon-01.png');
+        margin: 0 auto;
+        background-size: 100%;
+        vertical-align: middle;
+      }
+    }
+  }
+
+  .remark{
+    width: 530px;
+    height: 70px;
+    background-color: #c9c9c9;
+    display: block;
+    position: relative;
+    margin: 20px auto 0;
+    padding-left: 32px;
+    &:before{
+      content: "";
+      width: 35px;
+      height: 70px;
+      display: inline-block;
+      border-radius: 35px 0 0 35px;
+      background-color: #c9c9c9;
+      position: absolute;
+      left: -35px;
+      top: 0;
+    }
+    &:after{
+      content: "";
+      width: 35px;
+      height: 70px;
+      display: inline-block;
+      border-radius: 0 35px 35px 0;
+      background-color: #c9c9c9;
+      position: absolute;
+      right: -35px;
+      top: 0;
+    }
+    .remark-icon{
+      display: inline-block;
+      width: 20px;
+      height: 20px;
+      background: url('../../img/market/benevolence/icon-remark-01.png');
+      background-size: 100%;
+      position: absolute;
+      top: 8px;
+      left: 0;
+    }
+    .remark-art{
+      font-size: 22px;
+      color: #fff;
+      display: inline-block;
+      width: 510px;
+      height: 70px;
+      overflow: hidden;
+    }
+  }
+
+  .property-wrapper{
+    padding-top: 18px;
+    .title{
+      padding: 0 20px 0;
+      margin: 20px 0;
+      line-height: 1px;
+      border-left: 200px solid #bebebe;
+      border-right: 200px solid #bebebe;
+      text-align: center;
+      font-size: 28px;
+      color: nth($colorText, 1);
+    }
+    .property-list{
+      text-align: left;
+      padding-top: 20px;
+      width: 678px;
+      margin: 0 auto;
+      li{
+        width: 320px;
+        height: 232px;
+        display: inline-block;
+        background-color: #fff;
+        position: relative;
+        padding-top: 30px;
+        &:nth-of-type(n+3){
+          margin-top: 35px;
+        }
+        &:nth-of-type(even){
+          margin-left: 35px;
+        }
+        .icon-con{
+          width: 108px;
+          height: 108px;
+          border-radius: 50%;
+          background-color: #f0e4ce;
+          margin: 0 auto;
+          position: relative;
+          .icon{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            margin: 0 auto;
+            display: block;
+            background-size: 100%;
+          }
+          .icon-01{
+            width: 85px;
+            height: 75px;
+            background-image: url('../../img/market/benevolence/icon-property-01.png');
+          }
+          .icon-02{
+            width: 64px;
+            height: 66px;
+            background-image: url('../../img/market/benevolence/icon-property-02.png');
+          }
+        }
+        .name{
+          display: block;
+          text-align: center;
+          font-size: 28px;
+          color: nth($colorText, 1);
+          margin-top: 5px;
+        }
+        .status{
+          display: block;
+          text-align: center;
+          font-size: 22px;
+          color: nth($colorText, 2);
+        }
+        .benevolence-con{
+          position: absolute;
+          top: 0;
+          right: 19px;
+          .value{
+            font-size: 22px;
+          }
+          .icon{
+            width: 18px;
+            height: 18px;
+            display: inline-block;
+            margin-left: 8px;
+            background-size: 100%;
+            background-image: url('../../img/market/benevolence/icon-property-03.png');
+          }
+        }
+      }
+    }
+  }
+}
+
+

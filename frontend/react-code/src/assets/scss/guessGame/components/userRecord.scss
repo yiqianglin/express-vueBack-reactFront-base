@@ -1,0 +1,138 @@
+@import '../../lib/lib-variables.scss';
+
+// 投注记录
+.user-record
+{
+    font-size: 28px;
+
+    position: absolute;
+    bottom: 99px;
+
+    width: 100%;
+    height: 75px;
+    padding-top: 12px;
+
+    text-align: center;
+
+    color: #9d4b1d;
+    background: url('../../img/game/user-record-bg.png') no-repeat center top;
+    background-size: 712px;
+    .betScoreSum
+    {
+        line-height: 63px;
+
+        padding: 0 54px;
+        .show-record
+        {
+            font-size: 24px;
+
+            float: right;
+
+            color: #9d4b1d;
+        }
+        .toggle-playType
+        {
+            font-size: 24px;
+
+            float: left;
+
+            color: #9d4b1d;
+        }
+        .up-arrow
+        {
+            display: inline-block;
+
+            width: 22px;
+            height: 13px;
+            margin-left: 10px;
+
+            transition: 1s transform ease;
+            vertical-align: baseline;
+
+            background-image: url('../../img/sprites/game-btn/up-arrow.png');
+            background-size: 22px;
+        }
+    }
+    .record-content
+    {
+        width: 674px;
+        height: 240px;
+        margin: 0 auto;
+
+        background-color: #473232;
+    }
+    .empty-data
+    {
+        line-height: 240px;
+    }
+    .record-list
+    {
+        font-family: '微软雅黑';
+        font-size: 24px;
+
+        overflow-y: auto;
+
+        height: 100%;
+        padding: 0 4px;
+
+        color: #f9f7ac;
+        .record-item
+        {
+            line-height: 60px;
+
+            height: 60px;
+
+            text-align: left;
+
+            border-top: 1px solid #382a2a;
+            border-bottom: 1px solid #594545;
+            span
+            {
+                display: inline-block;
+
+                text-align: right;
+            }
+            .time
+            {
+                width: 130px;
+
+                color: #ad9871;
+            }
+            .quote
+            {
+                width: 145px;
+            }
+            .guessType
+            {
+                width: 180px;
+                margin-right: 10px;
+                &.up
+                {
+                    color: #f96252;
+                }
+                &.down
+                {
+                    color: #aaf06f;
+                }
+            }
+            &:first-child
+            {
+                border-top: none;
+            }
+            &:last-child
+            {
+                border-bottom: none;
+            }
+        }
+    }
+    &.active
+    {
+        height: 360px;
+
+        background-image: url('../../img/game/user-record-bg_active.png');
+        .up-arrow
+        {
+            transform: rotateZ(-180deg);
+        }
+    }
+}

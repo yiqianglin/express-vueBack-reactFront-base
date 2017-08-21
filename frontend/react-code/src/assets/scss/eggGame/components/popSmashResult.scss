@@ -1,0 +1,286 @@
+@import '../../lib/lib-variables.scss';
+@import '../../lib/lib-mixin.scss';
+
+.rebon
+{
+    position: absolute;
+    top: 0;
+
+    width: 750px;
+    height: 700px;
+
+    transform: translateY(-700px);
+
+    background: url('../../img/pop/egg/rebon.png') no-repeat center;
+    background-size: 732px;
+}
+.pop-body-result
+{
+    font-size: 24px;
+    font-weight: bolder;
+    line-height: 1;
+    line-height: 1;
+
+    position: fixed;
+    z-index: $zIndex-4;
+    top: -70px;
+    right: 0;
+    bottom: 0;
+    left: 0;
+
+    width: 585px;
+    height: 534px;
+    margin: auto;
+
+    transition: transform .3s ease;
+    // transform: translate(-50%, -50%);
+    transform: scale(0, 0);
+    text-align: center;
+    text-align: center;
+
+    color: #fff;
+    background: url('../../img/pop/egg/result-bg.png') no-repeat center;
+    background-size: 596px;
+    .result-light
+    {
+        position: absolute;
+        top: -12px;
+        left: 6px;
+
+        width: 573px;
+        height: 559px;
+
+        background: url('../../img/pop/egg/light.png') no-repeat center;
+        background-size: 573px;
+
+        &.rolate
+        {
+            animation: rotateLight 5s linear infinite;
+        }
+    }
+    .result-content
+    {
+        position: relative;
+
+        width: 100%;
+        height: 100%;
+    }
+    .result-tt
+    {
+        width: 100%;
+        height: 143px;
+
+        background: url('../../img/pop/egg/tt02.png') no-repeat center;
+        background-size: 511px;
+
+        &.classic-win
+        {
+            background-image: url('../../img/pop/egg/tt01.png');
+        }
+        &.level-pass
+        {
+            background-image: url('../../img/pop/egg/tt03.png');
+        }
+        &.level-win
+        {
+            background-image: url('../../img/pop/egg/tt04.png');
+        }
+        &.level-fail
+        {
+            background-image: url('../../img/pop/egg/tt05.png');
+        }
+    }
+    .result-logo
+    {
+        font-size: 36px;
+
+        width: 100%;
+        height: 223px;
+        margin-top: -12px;
+
+        background-repeat: no-repeat;
+        background-position: center 56px;
+        background-size: 250px 130px;
+        &.result0
+        {
+            background-image: url('../../img/pop/egg/bad.png');
+        }
+        &.result2
+        {
+            background-image: url('../../img/pop/egg/hammer.png');
+        }
+        &.result3
+        {
+            background-image: url('../../img/pop/egg/lottery.png');
+        }
+        &.result8
+        {
+            background-image: url('../../img/pop/egg/level01.png');
+        }
+        &.result9,
+        {
+            background-image: url('../../img/pop/egg/level01.png');
+        }
+        &.result10
+        {
+            background-image: url('../../img/pop/egg/level02.png');
+        }
+        &.result11
+        {
+            background-image: url('../../img/pop/egg/level03.png');
+        }
+    }
+    .result-text1
+    {
+        font-size: 20px;
+        line-height: 24px;
+
+        margin-bottom: 24px;
+        .red-txt
+        {
+            color: red;
+        }
+    }
+    .result-text2
+    {
+        font-size: 36px;
+
+        margin-bottom: 24px;
+
+        color: #fcc449;
+    }
+    .btn-group
+    {
+        position: absolute;
+        bottom: -25px;
+
+        width: 100%;
+        height: 93px;
+    }
+    .result-btn
+    {
+        display: inline-block;
+
+        width: 244px;
+        height: 93px;
+
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: 90% 90%;
+        &.retry
+        {
+            background-image: url('../../img/pop/egg/btn-retry.png');
+        }
+        &.again
+        {
+            background-image: url('../../img/pop/egg/btn-again.png');
+        }
+        &.award
+        {
+            background-image: url('../../img/pop/egg/btn-award.png');
+        }
+        &.continue1
+        {
+            background-image: url('../../img/pop/egg/btn-continue1.png');
+        }
+        &.continue2
+        {
+            background-image: url('../../img/pop/egg/btn-continue1.png');
+        }
+        &:active
+        {
+            transform: scale(.95,.95);
+            transform-origin: bottom center;
+        }
+    }
+}
+
+.pop-show.pop-result
+{
+    .rebon
+    {
+        z-index: $zIndex-5;
+
+        animation: dropRebon 2.5s linear forwards;
+    }
+    .pop-body-result
+    {
+        // transform: translate(-50%, -50%);
+        // transform: scale(1, 1);
+        animation: popResult 5.6s linear;
+        &.nextLevel
+        {
+            animation: popShow 56s linear;
+        }
+        &.scale
+        {
+            animation: popHide .3s linear;
+        }
+    }
+}
+
+@keyframes popHide
+{
+    from
+    {
+        transform: scale(1, 1);
+    }
+    to
+    {
+        transform: scale(0, 0);
+    }
+}
+@keyframes popShow
+{
+    0%
+    {
+        transform: scale(0, 0);
+    }
+    1%,
+    99%
+    {
+        transform: scale(1, 1);
+    }
+    100%
+    {
+        transform: scale(0, 0);
+    }
+}
+@keyframes popResult
+{
+    0%
+    {
+        transform: scale(0, 0);
+    }
+    5.4%,
+    94.6%
+    {
+        transform: scale(1, 1);
+    }
+    100%
+    {
+        transform: scale(0, 0);
+    }
+}
+@keyframes dropRebon
+{
+    0%
+    {
+        transform: translateY(-515px);
+    }
+    100%
+    {
+        transform: translateY(1400px);
+    }
+}
+@keyframes rotateLight
+{
+    0%
+    {
+        transform: rotateZ(0deg);
+    }
+    100%
+    {
+        transform: rotateZ(360deg);
+    }
+}

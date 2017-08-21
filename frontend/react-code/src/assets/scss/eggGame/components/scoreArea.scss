@@ -1,0 +1,65 @@
+@import '../../lib/lib-variables.scss';
+
+.score-area
+{
+    font-size: 26px;
+    line-height: 1;
+
+    width: 690px;
+    margin-bottom: 16px;
+
+    text-align: center;
+
+    color: #fff;
+    border-radius: 10px;
+    background-size: 75px;
+
+    .bean-num
+    {
+        color: #ed3707;
+    }
+}
+.score-log-con
+{
+    position: relative;
+    top: 0;
+    right: 0;
+
+    color: #ed3707;
+    .score-log
+    {
+        line-height: 45px;
+
+        position: absolute;
+        top: -60px;
+        left: 200px;
+
+        height: 45px;
+
+        transform: translate(0, 40px);
+        animation: numberFadeInFromBottom 1.5s;
+
+        opacity: 1;
+    }
+}
+@keyframes numberFadeInFromBottom
+{
+    0%
+    {
+        transform: translate(0, 40px);
+
+        opacity: 1;
+    }
+    50%
+    {
+        transform: translate(0, 0px);
+
+        opacity: .5;
+    }
+    100%
+    {
+        transform: translate(0, 0px);
+
+        opacity: .2;
+    }
+}

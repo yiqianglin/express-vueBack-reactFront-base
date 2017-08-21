@@ -1,0 +1,15 @@
+syntax = "proto3";
+package com.xunleijr.game.vo.smashegg ;
+
+message SmashEggResult{
+    string code = 1;
+    string msg = 2;
+    int32 roundId = 3;
+    int32 eggIndex = 4;
+    int32 prizeId = 5;
+    int32 rewardScore = 6;
+    string prizeImageUrl = 7;
+    string prizeName = 8;
+    int32 roundStatus = 9;
+    int32 userPrizeId = 10;
+}

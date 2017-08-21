@@ -1,0 +1,52 @@
+@import '../../lib/lib-variables.scss';
+
+// 延迟开局弹窗
+.pop-show.pop-nextRound
+{
+    .pop-mask
+    {
+        z-index: $zIndex-3;
+    }
+    .pop-body-nextRound
+    {
+        z-index: $zIndex-4;
+
+        transform: translate3d(-50%,0,0);
+    }
+}
+.pop-body-nextRound
+{
+    font-family: 'REDOCN';
+    line-height: 60px;
+
+    position: absolute;
+    bottom: 360px;
+    left: 50%;
+
+    width: 654px;
+    height: 385px;
+    padding-top: 100px;
+
+    transition: .3s transform ease;
+    transform: translate3d(-50%,800px,0);
+    text-align: center;
+
+    background: url('../../img/pop/next-round-bg.png') no-repeat center;
+    background-size: 654px;
+    .close-title
+    {
+        font-size: 50px;
+
+        margin-bottom: 24px;
+
+        color: #ff6441;
+    }
+    .close-sub-title
+    {
+        font-size: 28px;
+
+        margin-bottom: 56px;
+
+        color: #ed7924;
+    }
+}

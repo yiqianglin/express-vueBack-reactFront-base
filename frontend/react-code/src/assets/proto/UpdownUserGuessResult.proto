@@ -1,0 +1,15 @@
+
+syntax = "proto3";
+package com.xunleijr.game.vo.updown;
+
+message UpdownUserGuessResultResult {
+    string type = 1 ;
+    string code = 2;
+    string msg = 3;
+    int32 userId = 4;
+    int32 result = 5;
+    int32 score = 6;
+    int32 mode = 7;
+    int32 playType = 8;
+    repeated string winOptions = 9;
+}

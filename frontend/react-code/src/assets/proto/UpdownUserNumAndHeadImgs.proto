@@ -1,0 +1,16 @@
+
+syntax = "proto3";
+package com.xunleijr.game.vo;
+
+message UpdownUserNumAndHeadImgsResult {
+    string code = 1;
+    string msg = 2;
+    int32 userNum = 3;
+    repeated UpdownGuessUser guessUser = 4;
+}
+
+message UpdownGuessUser{
+    string picUrl = 1;
+    int32 guessType = 2;
+    int32 userId = 3;
+}

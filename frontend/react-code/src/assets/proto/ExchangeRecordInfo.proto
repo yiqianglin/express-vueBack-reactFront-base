@@ -1,0 +1,26 @@
+syntax = "proto3";
+package com.xunleijr.game.vo ;
+   
+message ExchangeRecordInfoResult{
+    string code = 1 ;
+    string msg = 2 ;
+    int32 productId = 3 ;
+    int32 orderId = 4 ;
+    string productName = 5;
+    string exchangeTime = 6;
+    int32 orderStatus = 7;
+    string productPicUrl = 8;
+    int32 receivedStatus = 9;
+    string receiver = 10;
+    string receivedPhone = 11;
+    string receivedProvince = 12;
+    string receivedCity = 13;
+    string receivedAddress = 14;
+    string trackingCompany = 15;
+    string trackingNumber = 16;
+    string productDesc = 17;
+    string couponCode = 18;
+    int32 createSource = 19;
+    int32 spendScore = 20;
+    string couponType = 21;
+}

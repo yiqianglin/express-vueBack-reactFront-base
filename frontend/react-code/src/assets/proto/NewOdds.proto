@@ -1,0 +1,20 @@
+
+syntax = "proto3";
+package com.xunleijr.game.vo ;
+
+message NewOddsResult{
+    string type = 1 ;
+    string code = 2 ;
+    string msg = 3 ;
+
+    message Result {
+        int32 mode = 1;
+        int64 roundId = 2;
+        double upOdds = 3;
+        double downOdds = 4;
+        int32 playType = 5;
+     }
+
+    Result result = 4;
+
+}

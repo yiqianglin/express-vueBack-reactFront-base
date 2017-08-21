@@ -1,0 +1,190 @@
+@import '../lib/lib-variables';
+@import '../lib/lib-mixin';
+@import '../lib/lib-reset';
+@import '../lib/lib-help';
+
+@font-face {
+    font-family: "REDOCN";
+    src: url("../../font/REDOCN.eot"); /* IE9 */
+    src: url("../../font/REDOCN.eot?#iefix") format("embedded-opentype"), /* IE6-IE8 */
+    url("../../font/REDOCN.woff") format("woff"), /* chrome, firefox */
+    url("../../font/REDOCN.ttf") format("truetype"), /* chrome, firefox, opera, Safari, Android, iOS 4.2+ */
+    url("../../font/REDOCN.svg#REDOCN") format("svg"); /* iOS 4.1- */
+    font-style: normal;
+    font-weight: normal;
+}
+#root
+{
+    height: 100%;
+    min-height: 100%;
+}
+.app-wrapper
+{
+    display: flex;
+    flex-direction: column;
+
+    width: 100%;
+    max-width: 7.5rem;
+    height: 100%;
+    min-height: 100%;
+    margin: 0;
+
+    background-color: nth($colorBg,2);
+}
+
+@keyframes shake
+{
+    0%,
+    100%
+    {
+        transform: rotateZ(0deg);
+    }
+    25%
+    {
+        transform: rotateZ(-5deg);
+    }
+    50%
+    {
+        transform: rotateZ(0deg);
+    }
+    75%
+    {
+        transform: rotateZ(5deg);
+    }
+}
+@keyframes scaleOut
+{
+    0%,
+    100%
+    {
+        transform: scale(1);
+    }
+    50%
+    {
+        transform: scale(1.1);
+    }
+}
+@keyframes fadeIn
+{
+    from
+    {
+        opacity: 1;
+    }
+    to
+    {
+        opacity: 0;
+    }
+}
+@keyframes fadeOut
+{
+    from
+    {
+        opacity: 0;
+    }
+    to
+    {
+        opacity: 1;
+    }
+}
+@keyframes slideLeftOut
+{
+    0%
+    {
+        transform: translate(-200px,0);
+    }
+    90%
+    {
+        transform: translate(10px,0);
+    }
+    100%
+    {
+        transform: translate(0,0);
+    }
+}
+@keyframes slideLeftIn
+{
+    0%
+    {
+        transform: translate(0,0);
+    }
+    100%
+    {
+        transform: translate(-200px,0);
+    }
+}
+@keyframes slideLeftIn2
+{
+    0%
+    {
+        transform: translate(0,0);
+    }
+    100%
+    {
+        transform: translate(-433px,0);
+    }
+}
+@keyframes slideRightOut
+{
+    0%
+    {
+        transform: translate(200px,0);
+    }
+    90%
+    {
+        transform: translate(-10px,0);
+    }
+    100%
+    {
+        transform: translate(0,0);
+    }
+}
+@keyframes slideRightIn
+{
+    0%
+    {
+        transform: translate(0,0);
+    }
+    100%
+    {
+        transform: translate(200px,0);
+    }
+}
+@keyframes rotate
+{
+    from
+    {
+        transform: rotateZ(0deg);
+    }
+    to
+    {
+        transform: rotateZ(360deg);
+    }
+}
+@keyframes bling
+{
+    0%
+    {
+        opacity: 0;
+    }
+    33.3%
+    {
+        opacity: 1;
+    }
+    66.6%
+    {
+        opacity: 0;
+    }
+    100%
+    {
+        opacity: 1;
+    }
+}
+
+@import '../common/pop.scss';
+@import '../common/popWeixinSubscribe.scss';
+@import '../common/popToast.scss';
+@import '../common/popGetGold.scss';
+@import '../common/popSign.scss';
+@import '../common/popSignSucc.scss';
+@import './components/popBox.scss';
+@import '../common/popLotteryGuide.scss';

@@ -1,0 +1,35 @@
+@import '../lib/lib-variables';
+
+.game-wrap
+{
+    position: relative;
+
+    height: 100%;
+
+    background: url('../../img/eggGame/wrap-bg.png') no-repeat top #1f1137;
+    background-size: 750px;
+}
+.game-area
+{
+    position: relative;
+
+    display: flex;
+    flex-direction: column;
+
+    height: 1094px;
+    padding: 411px 15px 14px;
+
+    background: url('../../img/eggGame/slogan.png') no-repeat center 75px;
+    background-size: 345px;
+
+    justify-content: flex-start;
+}
+
+@import './components/bottomBar.scss';
+@import './components/gametip.scss';
+@import './components/eggArea.scss';
+@import './components/prizebar.scss';
+@import './components/historyRecord.scss';
+@import './components/winnerInfo.scss';
+@import './components/popSmashResult.scss';
+@import './components/navBar.scss';

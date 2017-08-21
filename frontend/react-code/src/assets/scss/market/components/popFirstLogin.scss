@@ -1,0 +1,309 @@
+@import '../../lib/lib-variables.scss';
+
+// 首次登陆
+.pop-first-login
+{
+    .pop-mask
+    {
+        // background: url("../../img/pop/first-login/bg.jpg") no-repeat center;
+        // background-size: 100%;
+    }
+}
+.pop-body-first-login
+{
+    font-family: 'REDOCN';
+
+    position: fixed;
+    z-index: -($zIndex-1);
+    top: 0;
+    left: 0;
+
+    display: flex;
+
+    width: 100%;
+    height: 100%;
+
+    justify-content: center;
+    align-items: center;
+    .bean
+    {
+        position: absolute;
+        bottom: 0;
+
+        display: inline-block;
+
+        width: 60px;
+        height: 56px;
+
+        background: url('../../img/pop/first-login/bean1.png') no-repeat center;
+        &.bean1
+        {
+            left: 45px;
+
+            background-size: 47px;
+        }
+        &.bean2
+        {
+            left: 106px;
+
+            width: 50px;
+            height: 46px;
+
+            background: url('../../img/pop/first-login/bean2.png') no-repeat center;
+            background-size: 48px;
+        }
+        &.bean3
+        {
+            left: 180px;
+
+            width: 50px;
+            height: 46px;
+
+            background: url('../../img/pop/first-login/bean2.png') no-repeat center;
+            background-size: 48px;
+        }
+        &.bean4
+        {
+            left: 198px;
+
+            background-size: 52px;
+        }
+        &.bean5
+        {
+            left: 200px;
+
+            background-size: 59px;
+        }
+        &.bean6
+        {
+            left: 230px;
+
+            width: 50px;
+            height: 46px;
+
+            background: url('../../img/pop/first-login/bean2.png') no-repeat center;
+            background-size: 49px;
+        }
+        &.bean7
+        {
+            left: 283px;
+
+            background-size: 40px;
+        }
+        &.bean8
+        {
+            left: 313px;
+
+            background-size: 51px;
+        }
+        &.bean9
+        {
+            left: 329px;
+
+            width: 50px;
+            height: 46px;
+
+            background: url('../../img/pop/first-login/bean2.png') no-repeat center;
+            background-size: 47px;
+        }
+        &.bean10
+        {
+            left: 341px;
+
+            background-size: 56px;
+        }
+        &.bean11
+        {
+            left: 373px;
+
+            width: 50px;
+            height: 46px;
+
+            background: url('../../img/pop/first-login/bean2.png') no-repeat center;
+            background-size: 43px;
+        }
+        &.bean12
+        {
+            left: 376px;
+
+            background-size: 51px;
+        }
+        &.bean13
+        {
+            left: 422px;
+
+            width: 50px;
+            height: 46px;
+
+            background: url('../../img/pop/first-login/bean2.png') no-repeat center;
+            background-size: 50px;
+        }
+        &.bean14
+        {
+            left: 422px;
+
+            background-size: 37px;
+        }
+        &.bean15
+        {
+            left: 419px;
+
+            width: 50px;
+            height: 46px;
+
+            background: url('../../img/pop/first-login/bean2.png') no-repeat center;
+            background-size: 28px;
+        }
+        &.bean16
+        {
+            left: 451px;
+
+            background-size: 49px;
+        }
+        &.bean17
+        {
+            left: 466px;
+
+            width: 50px;
+            height: 46px;
+
+            background: url('../../img/pop/first-login/bean2.png') no-repeat center;
+            background-size: 48px;
+        }
+        &.bean18
+        {
+            left: 509px;
+
+            background-size: 39px;
+        }
+        &.bean19
+        {
+            left: 510px;
+
+            background-size: 60px;
+        }
+        &.bean20
+        {
+            left: 571px;
+
+            width: 50px;
+            height: 46px;
+
+            background: url('../../img/pop/first-login/bean2.png') no-repeat center;
+            background-size: 47px;
+        }
+        &.bean21
+        {
+            left: 630px;
+
+            background-size: 50px;
+        }
+        &.bean22
+        {
+            left: 668px;
+
+            width: 50px;
+            height: 46px;
+
+            background: url('../../img/pop/first-login/bean2.png') no-repeat center;
+            background-size: 50px;
+        }
+    }
+
+    .bean-wrp
+    {
+        position: absolute;
+        bottom: -100px;
+        left: 0;
+
+        width: 100%;
+    }
+
+    .bean2-wrp
+    {
+        position: relative;
+
+        width: 647px;
+        height: 647px;
+
+        transform: scale(0,0);
+
+        .bg-wrp
+        {
+            font-size: 45.3px;
+
+            position: absolute;
+            top: 0;
+            left: 0;
+
+            width: 100%;
+            height: 100%;
+            padding-top: 474px;
+
+            text-align: center;
+
+            color: #803004;
+            background: url('../../img/pop/first-login/main-bg.png');
+            background-size: 647px;
+
+            .score
+            {
+                color: #d9391b;
+            }
+        }
+        .bg-light
+        {
+            position: absolute;
+            top: 0;
+            left: 0;
+
+            width: 100%;
+            height: 100%;
+
+            animation: rotateLight infinite linear 6s;
+
+            background: url('../../img/pop/first-login/light.png');
+            background-size: 100%;
+        }
+    }
+
+    .bean2-wrp.show-beans
+    {
+        transform: scale(1,1);
+        animation: scaleBeans 1s;
+    }
+}
+
+.pop-first-login.pop-show
+{
+    .pop-body-first-login
+    {
+        z-index: $zIndex-4;
+
+        transform: translateY(0);
+    }
+}
+
+@keyframes rotateLight
+{
+    from
+    {
+        transform: rotate(0);
+    }
+    to
+    {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes scaleBeans
+{
+    from
+    {
+        transform: scale(0,0);
+    }
+    to
+    {
+        transform: scale(1,1);
+    }
+}

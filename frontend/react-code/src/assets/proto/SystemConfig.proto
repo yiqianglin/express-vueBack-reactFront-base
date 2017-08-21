@@ -1,0 +1,26 @@
+
+syntax = "proto3";
+package com.xunleijr.game.vo ;
+
+message SystemConfigResult{
+    string code = 1;
+    string msg = 2;
+    string signin_gift_rules = 3;
+    int32 register_score = 4;
+    string bettingAmount = 5;
+    repeated RechargeScoreItem rechargeScoreItem = 6;
+    double scoreConvertToRMBRate = 7;
+    string taklingDataAppId = 8;
+    int32 subscribeScore = 9;
+    string order_details_hint_message = 10;
+    string mall_home_hint_message = 11;
+    string smashEggBettingAmount = 12;
+    double smashEggOdds = 13;
+    double smashEggMissionOdds = 14;
+    int32 firstRechargeCouponDays = 15;
+}
+
+message RechargeScoreItem {
+   int32 rechargeScore = 1;
+   int32 rewardScore = 2;
+}

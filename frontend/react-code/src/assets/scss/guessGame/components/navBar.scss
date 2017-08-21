@@ -1,0 +1,130 @@
+@import '../../lib/lib-variables.scss';
+
+// 顶部导航条
+.nav-bar
+{
+    height: 88px;
+    padding: 8px 24px 0;
+
+    background: url('../../img/game/top-bg.png') no-repeat center;
+    background-size: 100%;
+    .link-block
+    {
+        font-size: 0;
+
+        float: left;
+        overflow: hidden;
+
+        width: 252px;
+        height: 63px;
+
+        border: solid 4px #f2ac51;
+        border-radius: 27.5px;
+        box-shadow: 0 6px 4px 0 rgba(185, 100, 0, .8);
+    }
+    .nav-link
+    {
+        font-size: 31.2px;
+        line-height: 55px;
+
+        display: inline-block;
+
+        width: 50%;
+        height: 100%;
+
+        text-align: center;
+
+        color: #dd8220;
+        background-color: #97481c;
+        &.active
+        {
+            color: #b13f00;
+            background-color: #e78e2d;
+        }
+    }
+    .icon-prize
+    {
+        float: right;
+
+        width: 157px;
+        height: 77px;
+
+        background-image: url('../../img/sprites/game-btn/btn-prize.png');
+        background-size: 157px;
+    }
+    .icon-lock
+    {
+        float: right;
+
+        width: 84px;
+        height: 72px;
+        margin-top: -3px;
+
+        background-image: url('../../img/sprites/game-btn/btn-lock.png');
+        background-size: 84px;
+    }
+    .icon-rank
+    {
+        // display: none;
+        float: right;
+
+        width: 116px;
+        height: 82px;
+        margin-top: -7px;
+        margin-left: 20px;
+
+        background-image: url('../../img/sprites/game-btn/btn-rank.png');
+        background-size: 116px;
+    }
+    .icon-menu
+    {
+        float: right;
+
+        width: 74px;
+        height: 75px;
+        margin-top: -3px;
+        margin-left: 20px;
+
+        background-image: url('../../img/sprites/game-btn/btn-menu.png');
+        background-size: 74px;
+    }
+    .top-menu
+    {
+        font-size: 30px;
+
+        position: absolute;
+        right: 0;
+
+        width: 244px;
+        height: 375px;
+        margin-top: 80px;
+        padding: 48px 0;
+
+        transition: .7s transform ease;
+        transform: scaleY(0);
+        text-align: center;
+        letter-spacing: 3px;
+
+        background: url('../../img/game/menu-bg.png') no-repeat center;
+        background-size: 100%;
+        text-shadow: #8d3000 2px 0 0,#8d3000 0 2px 0,#8d3000 -2px 0 0,#8d3000 0 -2px 0;
+        &.show
+        {
+            transform: scaleY(1);
+        }
+        .menu-item
+        {
+            line-height: 54px;
+
+            display: inline-block;
+
+            width: 164px;
+            height: 54px;
+            margin: 7px 0;
+
+            color: #f9f7ac;
+            background-image: url('../../img/sprites/game-btn/menu-btn.png');
+            background-size: 164px;
+        }
+    }
+}

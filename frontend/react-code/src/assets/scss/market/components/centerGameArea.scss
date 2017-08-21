@@ -1,0 +1,153 @@
+@import '../../lib/lib-variables.scss';
+
+.game-area
+{
+    position: relative;
+
+    width: 100%;
+
+    flex: 1;
+
+    .game-img
+    {
+        width: 272px;
+    }
+
+    .area-egg
+    {
+        width: 272px;
+        height: 304px;
+        margin: 0 auto;
+    }
+
+    .area
+    {
+        position: relative;
+
+        display: block;
+    }
+
+    .person
+    {
+        display: inline-block;
+    }
+
+    .area-wrp
+    {
+        display: flex;
+        flex-direction: row;
+
+        margin-top: -210px;
+        padding: 0 15px;
+
+        justify-content: space-between;
+    }
+
+    .player-num
+    {
+        font-size: 16px;
+        line-height: 16px;
+
+        position: absolute;
+        bottom: 46px;
+        left: 50%;
+
+        width: 146px;
+        padding-left: 17px;
+
+        transform: translateX(-50%);
+        text-align: center;
+
+        color: #eac187;
+        background: url('../../../img/gameCenter/home/icon-person.png') no-repeat
+        13px center;
+        background-size: 14px;
+    }
+
+    .area-guess
+    {
+        width: 272px;
+        height: 336px;
+
+        .person
+        {
+            position: absolute;
+            right: -20px;
+            bottom: 10px;
+
+            width: 43px;
+            height: 140px;
+
+            background: url('../../../img/gameCenter/home/p-guess.png') no-repeat
+            center;
+            background-size: 43px;
+        }
+    }
+
+    .area-shoot
+    {
+        width: 272px;
+        height: 329px;
+
+        .person
+        {
+            position: absolute;
+            bottom: 10px;
+            left: 8px;
+
+            width: 56px;
+            height: 151px;
+
+            background: url('../../../img/gameCenter/home/p-shoot.png') no-repeat
+            center;
+            background-size: 56px;
+        }
+    }
+
+    .area-center
+    {
+        width: 272px;
+        height: 200px;
+        margin: -90px auto 0;
+    }
+
+    .area-wrp2
+    {
+        display: flex;
+        flex-direction: row;
+
+        margin-top: -140px;
+        padding: 0 50px;
+
+        justify-content: space-between;
+    }
+
+    .area-ftball
+    {
+        width: 272px;
+        height: 262px;
+
+        .player-num
+        {
+            bottom: 43px;
+        }
+        .person
+        {
+            position: absolute;
+            right: 5px;
+            bottom: 10px;
+
+            width: 41px;
+            height: 134px;
+
+            background: url('../../../img/gameCenter/home/p-ft.png') no-repeat center;
+            background-size: 41px;
+        }
+    }
+    .area-more
+    {
+        width: 272px;
+        height: 238px;
+        margin-top: 38px;
+    }
+}

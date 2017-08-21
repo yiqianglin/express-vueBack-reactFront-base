@@ -1,0 +1,15 @@
+syntax = "proto3";
+package com.xunleijr.game.vo ;
+
+message MallProductInfoResult{
+  string code = 1 ;
+  string msg = 2 ;
+  int32 productId = 3 ;
+  string name = 4;
+  int32 needScore = 5;
+  string brief = 6;
+  string picUrl = 7;
+  int32 needSend = 8;
+  string desc = 9;
+  string exchangeRules = 10;
+}

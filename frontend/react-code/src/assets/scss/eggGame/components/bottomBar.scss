@@ -1,0 +1,144 @@
+@import '../../lib/lib-variables.scss';
+@import '../../lib/lib-mixin.scss';
+
+// 底部选择区域
+.bottom-bar
+{
+    font-family: 'Skranji';
+
+    position: absolute;
+    bottom: 0;
+
+    width: 100%;
+    height: 90px;
+    padding: 8px 15px 12px;
+
+    background: url('../../img/eggGame/btmbar-bg.png') no-repeat bottom;
+    background-size: 100%;
+    .my-gold
+    {
+        float: left;
+
+        width: 270px;
+
+        text-align: center;
+        .gold-num
+        {
+            font-size: 24px;
+            font-weight: bold;
+            line-height: 70px;
+
+            height: 70px;
+            padding-left: 70px;
+
+            text-align: left;
+            text-align: left;
+            letter-spacing: .7px;
+
+            color: #fff;
+            background: url('../../img/eggGame/my-score-bg.png') no-repeat left;
+            background-size: 258px;
+        }
+        .get-gold
+        {
+            float: right;
+
+            width: 62px;
+            height: 67px;
+
+            background-image: url('../../img/eggGame/btn-recharge.png');
+            background-size: 62px;
+            &:active
+            {
+                transform: scale(.95,.95);
+                transform-origin: bottom center;
+            }
+        }
+    }
+    .gold-choice
+    {
+        position: relative;
+
+        display: flex;
+        float: right;
+
+        justify-content: space-around;
+        .btn-tip
+        {
+            font-size: 18px;
+            font-weight: bold;
+            line-height: 36px;
+
+            position: absolute;
+            top: -48px;
+            right: 0;
+
+            width: 120px;
+            height: 48px;
+
+            text-align: center;
+
+            opacity: 0;
+            color: #fff;
+            background: url('../../img/eggGame/lottery-tip-bg.png') no-repeat center;
+            background-size: 120px;
+
+            &.active
+            {
+                animation: fadeInOut 6s linear;
+            }
+        }
+        .choice-item
+        {
+            font-size: 30px;
+            line-height: 60px;
+
+            width: 141px;
+            height: 70px;
+            margin-right: 2px;
+
+            text-align: center;
+
+            color: rgba(#fff, .7);
+            background: url('../../img/eggGame/score-btn_drak.png') no-repeat center;
+            background-size: 141px;
+
+            @include text-stroke(rgba(137, 64, 0, .75));
+            &:last-child
+            {
+                margin-right: 0;
+            }
+            &:active
+            {
+                transform: scale(.95,.95);
+                transform-origin: bottom center;
+            }
+            &.active
+            {
+                color: #fff;
+                background-image: url('../../img/eggGame/score-btn.png');
+            }
+        }
+    }
+    &.gameLevel
+    {
+        height: 90px;
+    }
+}
+
+@keyframes fadeInOut
+{
+    0%
+    {
+        opacity: 0;
+    }
+    16.7%,
+    83.3%
+    {
+        opacity: 1;
+    }
+    100%
+    {
+        opacity: 0;
+    }
+}

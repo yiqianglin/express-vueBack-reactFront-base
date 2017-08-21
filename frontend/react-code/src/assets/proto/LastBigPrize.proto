@@ -1,0 +1,10 @@
+syntax = "proto3";
+package com.xunleijr.game.vo.updown;
+
+message LastBigPrizeResult {
+    string code = 1;
+    string msg = 2;
+    string weixinName = 3;
+    string portraitUrl = 4;
+    string prizeDesc = 5;
+}

@@ -1,0 +1,194 @@
+@import '../lib/lib-variables';
+
+.award-logger-wrapper{
+  background: #eeeeee;
+  width: 100%;
+  min-height: 100%;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  /*顶部商品详情*/
+  .top{
+    height:280px;
+    width: 100%;
+    background-color: #92431a;
+    .left,.right{
+      float: left;
+      overflow: hidden;
+    }
+    .left{
+      position: relative;
+      width: 338px;
+      padding-top: 36px;
+    }
+    .right{
+      width: 412px;
+      padding-top: 107px;
+    }
+    .icon{
+      width: 206px;
+      height: 207px;
+      display: block;
+      background-image: url("../../img/market/awardLogger/icon-01.png");
+      background-size: 100%;
+      margin: 0 auto;
+    }
+    .title{
+      width: 305px;
+      height: 65px;
+      display: block;
+      background-image: url("../../img/market/awardLogger/icon-02.png");
+      background-size: 100%;
+    }
+  }
+
+
+  .award-logger{
+    padding-top: 5px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    .award-logger-con{
+      padding-top: 5px;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+    }
+    li{
+      height: 140px;
+      border-bottom: 1px solid #eeeeee;
+      background-color: #fff;
+      list-style: none;
+      &:nth-last-of-type(1){
+        border: none;
+      }
+    }
+    .logger-left, .logger-middle-left, .logger-middle-right, .logger-right{
+      display: inline-block;
+      vertical-align: middle;
+    }
+    .logger-left{
+      width: 116px;
+      padding-top: 34px;
+      height: 140px;
+    }
+    .logger-middle-left{
+      width: 322px;
+    }
+    .logger-middle-right{
+      width: 256px;
+      text-align: right;
+      white-space: nowrap;
+    }
+    .logger-right{
+      width: 50px;
+    }
+    .product-pic{
+      width: 52px;
+      height: 73px;
+      margin: 0 auto;
+      display: block;
+    }
+    .product-name{
+      display: block;
+      font-size: 28px;
+      color: nth($colorText, 1);
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+    .product-got-date{
+      display: block;
+      font-size: 26px;
+      color: nth($colorText, 2);
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+    .logger-status{
+      display: block;
+      font-size: 28px;
+      color: nth($colorText, 2);
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      &.highlight{
+        color: #f66603;
+      }
+    }
+    .got-way{
+      display: block;
+      font-size: 26px;
+      color: nth($colorText, 2);
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+    .arrow-right{
+      width: 20px;
+      height: 31px;
+      background-image: url("../../img/market/awardLogger/icon-arrow-right.png");
+      display: block;
+      margin: 0 auto;
+      background-size: 100%;
+    }
+    .am-list-view-scrollview-content{
+      min-height: 100%;
+    }
+  }
+
+  //列表为空
+  .isEmpty-wrapper{
+    flex: 1;
+    text-align: center;
+    padding-top: 80px;
+    .title{
+      font-size: 32px;
+      color: nth($colorText, 1);
+    }
+    .remark{
+      font-size: 28px;
+      color: #c0c0c0;
+      margin-top: 28px;
+    }
+    .goGame{
+      width: 295px;
+      height: 80px;
+      line-height: 80px;
+      font-size: 32px;
+      border: 3px solid #fcbe0d;
+      border-radius: 8px;
+      display: block;
+      color: #fcbe0d;
+      margin: 55px auto 0;
+    }
+  }
+
+  /*返回游戏按钮*/
+  .award-logger-to-game-button{
+    width: 295px;
+    height: 80px;
+    display: block;
+    text-align: center;
+    line-height: 78px;
+    color: #ffbb0e;
+    border: 3px solid #ffbb0e;
+    border-radius: 10px;
+    font-size: 32px;
+    margin: 0 auto 250px;
+  }
+
+  /*QQ群下方提示（样式覆盖）*/
+  .bottom-QQqun-remark-con{
+    position: absolute;
+    bottom: 0.25rem;
+    left: 0;
+    display: block;
+    width: 100%;
+  }
+
+}
+
+
+

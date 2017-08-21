@@ -1,0 +1,530 @@
+@import '../lib/lib-variables';
+
+body{
+  user-select: text !important;
+}
+@keyframes panelFadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.fadeIn {
+  animation: panelFadeIn ease-in .2s;
+  animation-fill-mode: forwards;
+}
+.product-info-wrapper{
+  opacity: 0;
+  background: #eeeeee;
+  width: 100%;
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  padding-bottom: .25rem;
+  /*顶部商品详情*/
+  .top{
+    height:280px;
+    width: 100%;
+    background-color: #92431a;
+    .left,.right{
+      height: 240px;
+      width: 375px;
+      float: left;
+      overflow: hidden;
+    }
+    .left{
+      position: relative;
+    }
+    .right{
+      padding-top: 98px;
+      color: #fff;
+    }
+  }
+  .product-img{
+    width: 160px;
+    height: 225px;
+    position: absolute;
+    left: 125px;
+    bottom: -32px;
+    //animation: up .6s both;
+    transform: rotate(30deg);
+  }
+  @-webkit-keyframes up{
+    0%{}
+    100%{transform: rotate(45deg) translateY(-217px)}
+  }
+  .shadow{
+    display: block;
+    width: 303px;
+    height: 10px;
+    background: url('../../img/market/productInfo/icon-decoration-01.png');
+    background-size: 100%;
+    position: absolute;
+    bottom: 0px;
+    left: 30px;
+  }
+  .product-name{
+    font-size: 36px;
+    font-weight: 700;
+    display: block;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+  .product-value{
+    display: block;
+    font-size: 26px;
+    margin-top: 10px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  /*激活码*/
+  .redeem-code-wrapper-simple{
+    background-color: #fff;
+    padding: 12px 0;
+    text-align: center;
+    margin-top: 20px;
+    .title{
+      color: nth($colorText, 2);
+      font-size: 28px;
+    }
+    .redeem-code{
+      color: #934312;
+      font-size: 42px;
+    }
+    .redeem-code-default{
+      color: #934312;
+      font-size: 32px;
+    }
+  }
+  .redeem-code-wrapper-double{
+    background-color: #fff;
+    margin-top: 20px;
+    font-size: 28px;
+    li{
+      border-bottom: 1px solid #eeeeee;
+      height: 80px;
+      line-height: 79px;
+    }
+    .label{
+      display: inline-block;
+      width: 150px;
+      text-align: center;
+      color: nth($colorText, 2);
+      vertical-align: middle;
+    }
+    .details{
+      display: inline-block;
+      width: 600px;
+      padding: 0 15px;
+      vertical-align: middle;
+      user-select: text!important;
+    }
+    .cardKey{
+      color: #934312;
+      font-size: 40px;
+    }
+  }
+
+  /*使用方法*/
+  .remark{
+    font-size: 28px;
+    background-color: #fff;
+    padding: 12px 0;
+    text-align: center;
+    margin-top: 20px;
+    display: flex;
+    .left{
+      width: 150px;
+      margin-right: 30px;
+      color: nth($colorText, 2);
+      line-height: 44px;
+      text-align: right;
+    }
+    .right{
+      flex: 1;
+      line-height: 44px;
+      text-align: left;
+    }
+    .art{
+      line-height: 2;
+    }
+    .indent{
+      position: relative;
+      padding-left: 28px;
+      .index{
+        display: block;
+        width: 28px;
+        position: absolute;
+        top: 0;
+        left: 0;
+      }
+    }
+  }
+
+  /*奖品状态栏*/
+  .status-wrapper{
+    background-color: #fff;
+    margin-top: 20px;
+    font-size: 28px;
+    li{
+      border-bottom: 1px solid #eeeeee;
+      height: 80px;
+      line-height: 80px;
+      display: flex;
+      padding-right: 30px;
+    }
+    .label{
+      display: inline-block;
+      width: 150px;
+      text-align: right;
+      color: nth($colorText, 2);
+      margin-right: 30px;
+    }
+    .details{
+      flex: 1;
+    }
+  }
+
+  .btn{
+    display: block;
+    width: 642px;
+    height: 110px;
+    background: url('../../img/market/productInfo/icon-btn.png');
+    background-size: 100%;
+    margin: 45px auto 0;
+    line-height: 100px;
+    font-size: 38px;
+    text-align: center;
+    color: #f9ebbb;
+    font-weight: bolder;
+    text-shadow: #8d3000 3px 0 0, #8d3000 0 3px 0, #8d3000 -3px 0 0, #8d3000 0 -3px 0;
+  }
+
+  /*收件人信息*/
+  .addressee-wrapper{
+    background-color: #fff;
+    margin-top: 18px;
+    .input-con{
+      height: 82px;
+      line-height: 80px;
+      border-bottom: 1px solid #eeeeee;
+      font-size: 28px;
+      display: flex;
+      align-items: center;
+      padding-right: 30px;
+    }
+    label{
+      color: nth($colorText, 2);
+      width: 150px;
+      text-align: right;
+      display: inline-block;
+      margin-right: 30px;
+      vertical-align: middle;
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+    }
+    input{
+      flex: 1;
+      border: none;
+      -webkit-appearance: none;
+      font-size: 28px;
+      font-family: 'microsoft yahei';
+      padding: 0;
+      &::-webkit-input-placeholder {
+        color: nth($colorText, 2);
+        line-height: 1.5;
+      }
+    }
+    #addressee-province{
+      width: 245px;
+      border-right: 1px solid #eeeeee;
+      position: relative;
+      display: inline-block;
+      line-height: 80px;
+      height: 80px;
+      vertical-align: middle;
+      text-align: right;
+      padding-right: 60px;
+      &:after{
+        display: block;
+        content: ' ';
+        border-width: 14px 8px 14px 8px;
+        border-style: solid;
+        border-color: #676767 transparent transparent transparent;
+        position:absolute;
+        top: 35px;
+        right: 23px;
+      }
+/*      &::-webkit-input-placeholder {
+        color: nth($colorText, 1);
+        text-align: right;
+        padding-right: 60px;
+      }*/
+    }
+    #addressee-city{
+      width: 312px;
+      position: relative;
+      display: inline-block;
+      height: 80px;
+      line-height: 80px;
+      vertical-align: middle;
+      text-align: right;
+      padding-right: 60px;
+      &:after{
+        display: block;
+        content: ' ';
+        border-width: 14px 8px 14px 8px;
+        border-style: solid;
+        border-color: #676767 transparent transparent transparent;
+        position:absolute;
+        top: 35px;
+        right: 23px;
+      }
+/*      &::-webkit-input-placeholder {
+        color: nth($colorText, 1);
+        text-align: right;
+        padding-right: 60px;
+      }*/
+    }
+  }
+
+  /*快递状态栏*/
+  .expressage-wrapper{
+    background-color: #fff;
+    margin-top: 20px;
+    li{
+      border-bottom: 1px solid #eeeeee;
+      height: 80px;
+      line-height: 80px;
+      display: flex;
+      padding-right: 30px;
+      &.address{
+        height: auto;
+        .label{
+          vertical-align: top;
+        }
+        .address-details{
+          line-height: 56px;
+          padding: 12px 0;
+        }
+      }
+    }
+    .label{
+      color: nth($colorText, 2);
+      width: 150px;
+      text-align: right;
+      line-height: .8rem;
+      height: .8rem;
+      display: inline-block;
+      margin-right: 30px;
+      vertical-align: middle;
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+    }
+    .details{
+      flex: 1;
+    }
+  }
+
+  /*皮肤信息*/
+  .exchange-game-skin-info-wrp{
+    // 展示信息
+    .game-account-shower{
+      font-size: 28px;
+      margin-top: 18px;
+      .skin-tips-qq, .skin-tips-wechat{
+        position: relative;
+        background-color: #fff;
+        margin-top: 20px;
+        font-size: 26px;
+        text-align: center;
+        padding: 5px 0;
+        .tips-inner{
+          position: relative;
+          display: inline-block;
+          user-select: none;
+        }
+        .tip-acc{
+          position: absolute;
+          display: block;
+          width: 100%;
+          height: 100%;
+          bottom: 0;
+          left: 0;
+          color: #f3af00;
+          padding-top: 42px;
+          user-select: text!important;
+          text-align: left;
+        }
+        .qq{
+          padding-left: 70%;
+        }
+        .weixin{
+          padding-left: 72%;
+        }
+      }
+      .qq-palceHolder{
+        display: inline-block;
+        width: 120px;
+      }
+      .weixin-palceHolder{
+        display: inline-block;
+        width: 110px;
+      }
+      .game-account-details{
+        margin-top: 15px;
+        background-color: #fff;
+      }
+      li{
+        border-bottom: 1px solid #eeeeee;
+        height: 80px;
+        line-height: 80px;
+        display: flex;
+        padding-right: 30px;
+      }
+      .label{
+        color: nth($colorText, 2);
+        width: 150px;
+        text-align: right;
+        line-height: .8rem;
+        height: .8rem;
+        display: inline-block;
+        margin-right: 30px;
+        vertical-align: middle;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+      }
+      .details{
+        flex: 1;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+      }
+    }
+    // 填写信息
+    .game-account-editor{
+      form{
+        background-color: #fff;
+        margin-top: 18px;
+        .input-con{
+          height: 82px;
+          border-bottom: 1px solid #eeeeee;
+          font-size: 28px;
+          display: flex;
+          align-items: center;
+          padding-right: 30px;
+        }
+        label{
+          color: nth($colorText, 2);
+          width: 150px;
+          text-align: right;
+          line-height: .8rem;
+          height: .8rem;
+          display: inline-block;
+          margin-right: 30px;
+          overflow: hidden;
+          white-space: nowrap;
+          text-overflow: ellipsis;
+        }
+        .text-input{
+          flex: 1;
+          border: none;
+          -webkit-appearance: none;
+          font-size: 28px;
+          font-family: 'microsoft yahei';
+          padding: 0;
+          &::-webkit-input-placeholder {
+            color: nth($colorText, 2);
+            line-height: 1.5;
+          }
+        }
+        .server-type-wrp{
+          height: auto;
+        }
+        .server-type-selection{
+          flex: 1;
+          li{
+            display: inline-block;
+            width: 50%;
+            position: relative;
+            .selection{
+              position: relative;
+              left: 0;
+              display: inline-block;
+              width: 0.4rem;
+              height: 0.4rem;
+              background: url('../../img/pop/get-gold-radio-unselect.png') no-repeat left center;
+              background-size: 0.4rem;
+              vertical-align: middle;
+              &.selected{
+                background:  url('../../img/pop/get-gold-radio-selected.png') no-repeat left center;
+                background-size: 0.4rem;
+              }
+            }
+            .selection-name{
+              vertical-align: middle;
+              height: 80px;
+              line-height: 80px;
+              display: inline-block;
+              margin-left: 10px;
+            }
+          }
+        }
+        .common-picker{
+          & > div{
+            flex: 1;
+            display: flex;
+            height: 80px;
+            line-height: 80px;
+          }
+          .selection-inner{
+            flex: 1;
+          }
+          .real-selection{
+            position: relative;
+            width: 400px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            padding-right: 60px;
+            &:after{
+              display: block;
+              content: ' ';
+              border-width: 14px 8px 14px 8px;
+              border-style: solid;
+              border-color: #676767 transparent transparent transparent;
+              position:absolute;
+              top: 35px;
+              right: 23px;
+            }
+          }
+        }
+      }
+      .save-info-btn{
+        display: block;
+        width: 642px;
+        height: 110px;
+        background: url('../../img/market/productInfo/icon-btn.png');
+        background-size: 100%;
+        margin: 15px auto 0;
+        line-height: 100px;
+        font-size: 38px;
+        text-align: center;
+        color: #f9ebbb;
+        font-weight: bolder;
+        text-shadow: #8d3000 3px 0 0, #8d3000 0 3px 0, #8d3000 -3px 0 0, #8d3000 0 -3px 0;
+      }
+    }
+  }
+}
+

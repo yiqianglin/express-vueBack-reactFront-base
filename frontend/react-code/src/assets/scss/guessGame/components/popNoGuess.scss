@@ -1,0 +1,50 @@
+@import '../../lib/lib-variables.scss';
+
+// 未竞猜弹窗
+.pop-show.pop-noGuess
+{
+    .pop-mask
+    {
+        z-index: $zIndex-3;
+    }
+    .pop-body-noGuess
+    {
+        z-index: $zIndex-4;
+
+        transform: translate3d(-50%,0,0);
+    }
+}
+.pop-body-noGuess
+{
+    font-family: 'REDOCN';
+    line-height: 1;
+
+    position: absolute;
+    bottom: 420px;
+    left: 50%;
+
+    width: 520px;
+    height: 316px;
+    padding-top: 156px;
+    padding-left: 60px;
+
+    transition: .3s transform ease;
+    transform: translate3d(-50%,800px,0);
+    text-align: center;
+
+    color: #7f3203;
+    background: url('../../img/pop/no-guess-bg.png') no-repeat center;
+    background-size: 520px;
+
+    font-szie: 24px;
+    .close-sub-title
+    {
+        margin-bottom: 10px;
+    }
+    .quote
+    {
+        font-size: 28px;
+
+        color: #ff6441;
+    }
+}

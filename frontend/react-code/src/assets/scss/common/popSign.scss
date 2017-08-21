@@ -1,0 +1,157 @@
+@import '../lib/lib-variables.scss';
+
+// 签到弹窗
+.pop-show.pop-sign
+{
+    .pop-mask
+    {
+        z-index: $zIndex-3;
+    }
+    .pop-sign-content
+    {
+        z-index: $zIndex-4;
+
+        transform: translate3d(-50%,0,0);
+    }
+}
+.pop-sign-content
+{
+    font-size: 21.6px;
+
+    position: absolute;
+    top: 145px;
+    left: 50%;
+
+    width: 717px;
+    height: 717px;
+    padding-top: 148px;
+    padding-bottom: 93px;
+
+    transition: .3s transform ease;
+    transform: translate3d(-50%,-1000px,0);
+    text-align: center;
+
+    color: #803004;
+    background: url('../../img/pop/sign/signin_bg.png') no-repeat center;
+    background-size: 710px;
+    .close-btn
+    {
+        position: absolute;
+        top: 53px;
+        right: 16px;
+
+        width: 52px;
+        height: 52px;
+
+        background: url('../../img/pop/sign/close-sign.png') no-repeat center;
+        background-size: 52px;
+    }
+    .sign-text
+    {
+        font-size: 27.7px;
+
+        color: #fff7c4;
+    }
+    .prize-list
+    {
+        display: flex;
+
+        padding: 0 12px;
+
+        justify-content: center;
+        flex-wrap: wrap;
+        .prize-list-item
+        {
+            position: relative;
+
+            width: 134px;
+            height: 175px;
+            margin: 0 10px 45px;
+            padding-top: 136px;
+
+            border-radius: 17px;
+            box-shadow: 0 4px 5px 0 #743212;
+            .sign-tt
+            {
+                line-height: 34px;
+
+                position: absolute;
+                z-index: 1;
+                top: -15px;
+                left: 50%;
+
+                width: 113px;
+                height: 34px;
+                margin-left: -56px;
+
+                background: url('../../img/pop/sign/day-bg.png') no-repeat center;
+                background-size: 100%;
+            }
+            .score-num
+            {
+                color: #d9391b;
+            }
+            .score-text
+            {
+                line-height: 1;
+            }
+            .signed-mask
+            {
+                position: absolute;
+                top: 0;
+
+                display: none;
+
+                width: 100%;
+                height: 100%;
+
+                border-radius: 17px;
+                background: url('../../img/pop/sign/signed-bg.png') no-repeat center rgba(0,0,0,.3);
+                background-size: 87px;
+            }
+            &.cur
+            {
+                box-shadow: #53b788 4px 0 0,#53b788 0 4px 0,#53b788 -4px 0 0,#53b788 0 -4px 0;
+            }
+            &.signed
+            {
+                .sign-tt
+                {
+                    background-image: url('../../img/pop/sign/day-bg_dark.png');
+                }
+                .signed-mask
+                {
+                    display: block;
+                }
+            }
+        }
+        @for $i from 1 through 7
+        {
+            .prize0#{$i}
+            {
+                background: url('../../img/pop/sign/sign-day#{$i}.png') no-repeat center;
+                background-size: 141px;
+            }
+        }
+    }
+    .sign-btn
+    {
+        font-family: 'REDOCN';
+        font-size: 39px;
+        line-height: 70px;
+
+        position: absolute;
+        bottom: 0;
+
+        width: 393px;
+        height: 70px;
+        margin-left: -196px;
+
+        text-align: center;
+        letter-spacing: 7.4px;
+
+        color: #b25308;
+        background: url('../../img/pop/sign/sign-btn.png') no-repeat center;
+        background-size: 393px;
+    }
+}

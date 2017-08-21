@@ -1,0 +1,29 @@
+syntax = "proto3";
+package com.xunleijr.game.vo ;
+  
+message IndexResult{
+   string code = 1;
+   string msg = 2;
+   repeated Banner banner = 3;
+   int32 updownUserNum = 4;
+   int32 smasheggUserNum = 5;
+   int32 hitmeUserNum = 6;
+   int32 crazybetUserNum = 7;
+   string updownLinkUrl = 8;
+   string smasheggLinkUrl = 9;
+   string hitmeLinkUrl = 10;
+   string crazybetLinkUrl = 11;
+   string mallLinkUrl = 12;
+   string lotteryLinkUrl = 13;
+   string updownImage = 14;
+   string smasheggImage = 15;
+   string hitmeImage = 16;
+   string crazybetImage = 17;
+   string moreImage = 18;
+   string centerImage = 19;
+}
+message Banner{
+   string title = 1;
+   string image = 2;
+   string url = 3;
+}

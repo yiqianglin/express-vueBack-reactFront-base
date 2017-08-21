@@ -1,0 +1,62 @@
+.bubble
+{
+    font-size: 26px;
+    line-height: 50px;
+
+    position: absolute;
+    top: -25px;
+
+    height: 50px;
+    padding: 0 28px;
+
+    opacity: 0;
+    color: #552810;
+    border: 1px solid #6a2c12;
+    border-radius: 25px;
+    background-color: rgba(#f8f4ad, .8);
+    &.active
+    {
+        animation: 3s fadeTip linear;
+    }
+    &:before
+    {
+        position: absolute;
+        top: 47px;
+        left: 24px;
+
+        content: '';
+
+        border-width: 14px 12px 14px 12px;
+        border-style: solid;
+        border-color: #6a2c12 transparent transparent transparent;
+    }
+    &:after
+    {
+        position: absolute;
+        top: 46px;
+        left: 25px;
+
+        content: '';
+
+        border-width: 13px 11px 13px 11px;
+        border-style: solid;
+        border-color: rgba(#f8f4ad, .8) transparent transparent transparent;
+    }
+}
+
+@keyframes fadeTip
+{
+    0%
+    {
+        opacity: 0;
+    }
+    16%,
+    84%
+    {
+        opacity: 1;
+    }
+    100%
+    {
+        opacity: 0;
+    }
+}

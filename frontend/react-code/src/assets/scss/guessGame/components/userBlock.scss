@@ -1,0 +1,117 @@
+@import '../../lib/lib-variables.scss';
+
+// 游戏参与者头像区域
+.user-block
+{
+    position: absolute;
+    bottom: 114px;
+
+    width: 100%;
+    height: 129px;
+
+    background: url('../../img/game/user-bg.png') no-repeat center top;
+    background-size: 200px;
+    .user-num
+    {
+        font-size: 22px;
+        line-height: 2;
+
+        text-align: center;
+
+        color: #f9f7ac;
+        text-shadow: #8d3000 2px 0 0,#8d3000 0 2px 0,#8d3000 -2px 0 0,#8d3000 0 -2px 0;
+        .icon-user
+        {
+            display: inline-block;
+
+            width: 31px;
+            height: 31px;
+            margin-right: 6px;
+
+            vertical-align: middle;
+
+            background-image: url('../../img/sprites/game-btn/user-num.png');
+            background-size: 31px;
+        }
+    }
+    .user-list
+    {
+        display: flex;
+
+        height: 87px;
+        padding: 6px 24px;
+
+        justify-content: center;
+
+        .user-avatar-wrp
+        {
+            position: relative;
+
+            margin-right: 10px;
+            margin-left: 10px;
+
+            animation: userAnimate .5s;
+        }
+        .user-avatar-wrp.active
+        {
+            &:after
+            {
+                position: absolute;
+                bottom: 10px;
+                left: 73px;
+
+                width: 47px;
+                height: 28px;
+
+                content: ' ';
+                animation: otherHit 1.5s ease-out;
+
+                opacity: 0;
+                background: url('../../img/game/other-hit.png') no-repeat center;
+                background-size: 47px;
+            }
+        }
+        .user-avatar
+        {
+            width: 73px;
+            height: 75px;
+            padding: 6px;
+
+            border-radius: 36px;
+            background-image: url('../../img/sprites/game-btn/avatar-bg.png');
+            background-size: 73px;
+        }
+    }
+}
+
+@keyframes otherHit
+{
+    from
+    {
+        transform: translateY(0);
+
+        opacity: 1;
+    }
+    to
+    {
+        transform: translateY(-30px);
+
+        opacity: 0;
+    }
+}
+
+@keyframes userAnimate
+{
+    from
+    {
+        transform: translateY(18px);
+
+        opacity: 0;
+    }
+    to
+    {
+        transform: translateY(0px);
+
+        opacity: 1;
+    }
+}

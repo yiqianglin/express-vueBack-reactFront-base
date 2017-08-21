@@ -1,0 +1,19 @@
+
+syntax = "proto3";
+package com.xunleijr.game.vo ;
+    
+message ScoreLoggerListResult{
+    string code = 1;
+    string msg = 2;
+    int32 pageIndex = 3;
+    int32 type = 4;
+    message ScoreLoggerResult {
+        int32 operate = 1;
+        int32 score= 2;
+        string createTime = 3;
+        int32 balance = 4;
+        int32 type = 5;
+     }
+        
+    repeated ScoreLoggerResult scoreLoggerArray = 5;
+}

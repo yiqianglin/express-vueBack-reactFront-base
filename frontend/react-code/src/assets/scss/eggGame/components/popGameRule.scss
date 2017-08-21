@@ -1,0 +1,78 @@
+@import '../../lib/lib-variables.scss';
+
+// 玩法说明
+.pop-body-game-rule
+{
+    font-size: 26px;
+    line-height: 1.4;
+
+    position: fixed;
+    z-index: -($zIndex-1);
+    top: 221px;
+    left: 50%;
+
+    width: 657px;
+    height: 820px;
+    padding: 160px 60px 100px ;
+
+    transform: translate(-50%, 0);
+
+    opacity: 0;
+    color: #fff;
+    background: url('../../img/pop/rule/rule-bg-egg.png') no-repeat center;
+    background-size: 657px;
+
+    .rule-wrp
+    {
+        overflow: auto;
+
+        width: 100%;
+        height: 100%;
+
+        ol
+        {
+            margin-left: 40px;
+
+            list-style-position: outside;
+            list-style-type: decimal;
+            li
+            {
+                margin-bottom: 30px;
+                padding-left: 10px;
+
+                list-style-type: decimal;
+            }
+        }
+    }
+
+    .close-btn
+    {
+        position: absolute;
+        top: 44px;
+        right: -15px;
+
+        width: 88px;
+        height: 92px;
+
+        background-image: url('../../img/sprites/egg-game/btn-close-lg.png');
+        background-size: 88px;
+        &:active
+        {
+            transform: scale(.95,.95);
+        }
+    }
+}
+
+.pop-show.pop-game-rule
+{
+    .pop-mask
+    {
+        z-index: $zIndex-3;
+    }
+    .pop-body-game-rule
+    {
+        z-index: $zIndex-4;
+
+        opacity: 1;
+    }
+}

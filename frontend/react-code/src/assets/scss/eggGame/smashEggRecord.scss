@@ -1,0 +1,43 @@
+@import '../lib/lib-variables';
+.record-bg
+{
+    font-family: $fontFamily;
+
+    display: -webkit-box;
+    display: -webkit-flex;
+    display:    -moz-box;
+    display: -ms-flexbox;
+    display:         flex;
+            flex-direction: column;
+
+    height: 100%;
+
+    background: url('../../img/eggGame/bg-record.png') top left no-repeat;
+    -moz-background-size: 100% 100%;
+         background-size: 100% 100%;
+
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+       -moz-box-orient: vertical;
+       -moz-box-direction: normal;
+        -ms-flex-direction: column;
+    -webkit-box-pack: start;
+    -webkit-justify-content: flex-start;
+       -moz-box-pack: start;
+    -ms-flex-pack: start;
+            justify-content: flex-start;
+}
+
+.record-scroll
+{
+    line-height: 1;
+
+    overflow: auto;
+
+    padding-top: 120px;
+}
+
+@import '../common/autoLoadMore.scss';
+@import './components/recordList.scss';
+@import './components/recordNavBar.scss';

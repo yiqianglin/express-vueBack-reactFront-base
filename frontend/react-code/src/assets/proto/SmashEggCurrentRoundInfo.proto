@@ -1,0 +1,23 @@
+syntax = "proto3";
+package com.xunleijr.game.vo.smashegg ;
+
+message SmashEggCurrentRoundInfoResult{
+    string code = 1;
+    string msg = 2;
+    int32 mode = 3;
+    int32 roundId = 4;
+    string gameLevelName = 5;
+    int32 eggNum = 6;
+    int32 totalLevel = 7;
+    int32 currLevel = 8;
+    int32 guessScore = 9;
+    repeated GamelevelPrize prizeList = 10;
+    double smashEggOdds = 11;
+}
+
+message GamelevelPrize {
+   int32 userPrizeId = 1;
+   int32 eggIndex = 2;
+   string prizeImageUrl = 3;
+   string prizeName = 4;
+}

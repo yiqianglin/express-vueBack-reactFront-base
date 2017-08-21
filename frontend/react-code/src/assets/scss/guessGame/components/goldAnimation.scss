@@ -1,0 +1,130 @@
+@import '../../lib/lib-variables.scss';
+
+.gold-item
+{
+    position: absolute;
+    bottom: 0;
+
+    display: inline-block;
+
+    width: 78px;
+    height: 71px;
+
+    border-radius: 30%;
+    background: url('../../img/game/flygold.png') no-repeat center;
+
+    &.gold-invest-exceed0
+    {
+        left: 1.4rem;
+
+        background-size: 55px;
+    }
+
+    &.gold-invest-exceed1
+    {
+        left: .8rem;
+
+        background-size: 78px;
+    }
+
+    &.gold-invest-exceed2
+    {
+        left: .2rem;
+
+        background-size: 65px;
+    }
+
+    &.gold-invest-unexceed0
+    {
+        left: .8rem;
+
+        background-size: 55px;
+    }
+
+    &.gold-invest-unexceed1
+    {
+        left: .9rem;
+
+        background-size: 78px;
+    }
+
+    &.gold-invest-unexceed2
+    {
+        left: 1rem;
+
+        background-size: 65px;
+    }
+
+    &.gold-lottery-exceed0
+    {
+        left: 1.8rem;
+
+        background-size: 55px;
+    }
+
+    &.gold-lottery-exceed1
+    {
+        left: 1.4rem;
+
+        background-size: 78px;
+    }
+
+    &.gold-lottery-exceed2
+    {
+        left: 1.0rem;
+
+        background-size: 65px;
+    }
+
+    &.gold-lottery-unexceed0
+    {
+        left: 1.2rem;
+
+        background-size: 55px;
+    }
+
+    &.gold-lottery-unexceed1
+    {
+        left: 1.6rem;
+
+        background-size: 78px;
+    }
+
+    &.gold-lottery-unexceed2
+    {
+        left: 2.0rem;
+
+        background-size: 65px;
+    }
+}
+.gold-invest-exceedwrp
+{
+    position: absolute;
+    bottom: 0;
+
+    width: 100%;
+    height: 0;
+}
+
+.gold-invest-unexceedwrp
+{
+    position: absolute;
+    bottom: 0;
+
+    width: 100%;
+    height: 0;
+}
+
+.gold-lottery-exceedwrp
+{
+    position: absolute;
+    bottom: 2.9rem;
+    left: .3rem;
+}
+
+.gold-lottery-unexceedwrp
+{
+    position: absolute;
+    right: 4rem;
+    bottom: 2.9rem;
+}

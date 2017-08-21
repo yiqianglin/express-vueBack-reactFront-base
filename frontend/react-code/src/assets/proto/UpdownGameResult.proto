@@ -1,0 +1,14 @@
+syntax = "proto3";
+package com.xunleijr.game.vo.updown;
+
+message UpdownGameResultResult {
+    string type = 1 ;
+    string code = 2;
+    string msg = 3;
+    int64 roundId = 4;
+    int32 result = 5;
+    int32 mode = 6;
+    double newQuote = 7;
+    int64 newQuoteTs = 8;
+    int64 preQuoteTs = 9;
+}

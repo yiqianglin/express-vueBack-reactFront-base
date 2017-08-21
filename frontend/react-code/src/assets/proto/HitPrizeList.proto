@@ -1,0 +1,13 @@
+syntax = "proto3";
+package com.xunleijr.game.vo.hitme ;
+            
+message PrizeListResult{
+    string code = 1;
+    string msg = 2;
+    repeated Result results = 3;
+}
+  
+message Result{
+    string weixinName = 1;
+    int32 score = 2;
+}

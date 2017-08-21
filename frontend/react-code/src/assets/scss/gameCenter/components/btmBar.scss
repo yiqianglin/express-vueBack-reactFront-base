@@ -1,0 +1,133 @@
+@import '../../lib/lib-variables.scss';
+
+.btm-bar
+{
+    display: flex;
+    flex-direction: row;
+
+    margin-top: 46px;
+    padding: 0 43px 25px 23px;
+
+    align-items: flex-end;
+
+    .btm-market
+    {
+        display: flex;
+        flex-direction: column;
+
+        width: 184px;
+        height: 231px;
+        margin-right: 65px;
+        padding: 22px 0 15px 0;
+
+        text-align: center;
+
+        background: url('../../../img/gameCenter/home/btm-market.png') no-repeat center;
+        background-size: 184px;
+
+        justify-content: space-between;
+        align-items: center;
+
+        .title
+        {
+            font-size: 24px;
+            font-weight: bold;
+            line-height: 1.5;
+
+            color: #784e31;
+        }
+
+        .btn
+        {
+            font-size: 18px;
+            line-height: 30px;
+
+            position: relative;
+
+            width: 126px;
+            height: 32px;
+            padding-left: 37px;
+
+            text-align: left;
+
+            color: #fff;
+            border-radius: 14px;
+            background-image: linear-gradient(top, #ef6d36, #e73a48, #da1061, #de0e63);
+            .icon-gold
+            {
+                position: absolute;
+                top: 0;
+                left: -5px;
+
+                display: inline-block;
+
+                width: 40px;
+                height: 40px;
+
+                background: url('../../../img/game/gold-bg.png') no-repeat center;
+                background-size: 40px;
+            }
+        }
+    }
+    .btm-lottery
+    {
+        width: 208px;
+        height: 140px;
+        margin-right: 77px;
+        padding-top: 95px;
+
+        background: url('../../../img/gameCenter/home/btm-lottery.png') no-repeat center top;
+        background-size: 208px;
+        .btn
+        {
+            font-size: 20px;
+            line-height: 45px;
+
+            display: block;
+
+            width: 145px;
+            height: 49px;
+            margin: 0 auto;
+
+            text-align: center;
+
+            color: #5f2800;
+            background: url('../../../img/gameCenter/home/btm-btn.png') no-repeat center top;
+            background-size: 145px;
+        }
+    }
+    .btm-more
+    {
+        width: 145px;
+        height: 180px;
+        padding-top: 85px;
+
+        text-align: center;
+
+        background: url('../../../img/gameCenter/home/btm-more.png') no-repeat center;
+        background-size: 145px;
+        .intro
+        {
+            font-size: 24px;
+
+            margin-bottom: 15px;
+
+            color: #fff;
+        }
+        .btn
+        {
+            font-size: 20px;
+            line-height: 45px;
+
+            width: 145px;
+            height: 49px;
+            margin: 0 auto;
+
+            text-align: center;
+
+            color: #5f2800;
+            background: url('../../../img/gameCenter/home/btm-btn.png') no-repeat center top;
+            background-size: 145px;
+        }
+    }
+}

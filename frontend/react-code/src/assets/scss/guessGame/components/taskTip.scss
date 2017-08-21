@@ -1,0 +1,81 @@
+@import '../../lib/lib-variables.scss';
+
+.task-tip,
+.gift-tip
+{
+    font-family: '微软雅黑';
+    font-size: 26px;
+    line-height: 50px;
+
+    position: absolute;
+    top: -68px;
+
+    height: 50px;
+    padding: 0 28px;
+
+    transition: .5s opacity ease;
+
+    opacity: 0;
+    color: #552810;
+    border: 1px solid #6a2c12;
+    border-radius: 25px;
+    background-color: rgba(#f8f4ad, .8);
+    &.show-tip
+    {
+        opacity: 1;
+    }
+    &:before
+    {
+        position: absolute;
+        top: 47px;
+
+        content: '';
+
+        border-width: 14px 12px 14px 12px;
+        border-style: solid;
+        border-color: #6a2c12 transparent transparent transparent;
+    }
+    &:after
+    {
+        position: absolute;
+        top: 46px;
+
+        content: '';
+
+        border-width: 13px 11px 13px 11px;
+        border-style: solid;
+        border-color: rgba(#f8f4ad, .8) transparent transparent transparent;
+    }
+}
+.task-tip
+{
+    right: 15px;
+    &:before
+    {
+        right: 36px;
+    }
+    &:after
+    {
+        right: 37px;
+    }
+}
+.gift-tip
+{
+    top: -68px;
+    &.right:before
+    {
+        right: 36px;
+    }
+    &.right:after
+    {
+        right: 37px;
+    }
+    &.left:before
+    {
+        left: 36px;
+    }
+    &.left:after
+    {
+        left: 37px;
+    }
+}

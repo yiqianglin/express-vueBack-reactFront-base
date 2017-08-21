@@ -1,0 +1,13 @@
+
+syntax = "proto3";
+package com.xunleijr.game.vo;
+
+message UpdownHistoryRecordResult {
+    string code = 1;
+    string msg = 2;
+
+    message Result {
+        int32 resultType = 1;
+    }
+    repeated Result result = 3;
+}

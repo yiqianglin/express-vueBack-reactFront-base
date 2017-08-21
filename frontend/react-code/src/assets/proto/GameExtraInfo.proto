@@ -1,0 +1,17 @@
+
+syntax = "proto3";
+package com.xunleijr.game.vo.smashegg;
+
+message GameExtraInfoResult {
+    string code = 1;
+    string msg = 2;
+    int32 daySmashEggNum = 3;
+    int32 lotteryTargetNum = 4;
+    int32 lotteryDoneNum = 5;
+    repeated HistoryRecord list = 6;
+}
+
+message HistoryRecord {
+    int32 index = 1;
+    int32 awards = 2;
+}

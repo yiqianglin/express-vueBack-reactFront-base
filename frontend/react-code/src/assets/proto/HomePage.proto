@@ -1,0 +1,13 @@
+syntax = "proto3";
+package com.xunleijr.game.vo ;
+ 
+message HomePageResult{
+   string code = 1;
+   string msg = 2;
+   repeated Banner banner = 3;
+}
+message Banner{
+   string title = 1;
+   string image = 2;
+   string url = 3;
+}
